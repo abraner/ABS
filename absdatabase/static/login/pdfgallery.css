@@ -1,0 +1,296 @@
+body{
+    font: 22px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+}
+
+div.container{
+    width:100%;
+    height:99vh;
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+}
+
+a#back, a#back2{
+    border: 2px solid black;
+    border-radius: 2px;
+    background: gold;
+    width: 6.2em;
+    height: 1.5vw;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    margin-top: 4.0em;
+    margin-right: 10.0em;
+    margin-bottom: 0em;
+    transition: 0.6s;
+   text-align: center;
+    overflow: hidden;
+    padding:3px 5px;
+}
+a#back, a#back2{
+    color: #000000;
+}
+
+a#back:hover, a#back2:hover{
+    color: #a9a9a9;
+    background: green;
+    text-decoration: underline;
+}
+
+a#back2.btn.btn9{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #C0C0C0;
+    min-width: 7vw;
+    font-size: calc(.65vw + .65vh + .20vmin);
+    font-family: "Times New Roman";
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top:8.5em;
+    transition: 0.6s;
+   text-align: center;
+    overflow: hidden;
+    padding:5px;
+    text-decoration: none;
+}
+a#back2.btn.btn9{
+    color: #000000;
+}
+
+a#back2.btn.btn9:hover{
+    color: white;
+    background: #606060;
+    text-decoration: underline;
+}
+
+div.form-delete{
+    display: flex;
+    margin-top: -3%;
+    margin-left: 3%;
+}
+
+
+#formh2{
+    height:1.5em;
+    width: 100%;
+    text-align:center;
+    font-size: calc(2.0vw + 2.0vh + .25vmin);
+    margin-top:0vh;
+    margin-bottom:0vh;
+    color:#c0c0c0;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.formh4{
+    height:1.5em;
+    width: 100%;
+    text-align:center;
+    font-size: calc(0.75vw + 0.75vh + .25vmin);
+    margin-top:0vh;
+    margin-bottom:0vh;
+    color:#393939;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+
+
+}
+
+
+#formh3{
+    height:1.5em;
+    width: 100%;
+    text-align:center;
+    font-size: 2vw;
+    margin-top:0%;
+    margin-bottom:0px;
+    color:#c0c0c0;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+
+}
+
+#form1{
+    height:61vh;
+    width:94.9%;
+    margin-top:0px;
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+}
+
+#sectionA{
+    width:100%%;
+}
+
+
+
+span.phone-field-ext{
+    display:none;
+}
+
+li::marker{
+    display:none;
+}
+
+.section2{
+    width:100%;
+    height:68vh;
+    margin-top:50px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+
+}
+
+div.container1{
+    flex: .5;
+}
+
+div.container2{
+    flex: 2;
+}
+
+div.container3{
+    flex: .5;
+}
+
+
+.outerdiv{
+    width: 97%;
+    height:70vh;
+    margin-top:0%;
+    margin-left:auto;
+    margin-right:auto;
+    background:#a9a9a9;
+    position: relative;
+    border: 2px solid #C0C0C0;
+    border-color: black;
+}
+
+.outerdiv2{
+    width: 97%;
+    height:70vh;
+    margin-top:0%;
+    margin-left:auto;
+    margin-right:auto;
+    background:#a9a9a9;
+    position: relative;
+    border: 2px solid #C0C0C0;
+    border-color: black;
+
+}
+
+.form2{
+    width: 90%;
+    height: 90%;
+    margin-top:5%;
+    margin-left:auto;
+    margin-right:auto;
+    background:#a9a9a9;
+    position: relative;
+    border: 2px solid #C0C0C0;
+    border-color: black;
+}
+
+#form2{
+    width:400px;
+    height:708px;
+    background:#a9a9a9;
+    border:#5a3510 3px solid;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    float:left;
+}
+#form3{
+    width:100%;
+    margin-top:0px;
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+}
+
+img{
+    width: 90%;
+    margin-left: 0%;
+    margin-top: 0%;
+    margin-bottom: 0px;
+}
+
+.pdf1, .pdf2, .pdf3, .pdf4, .pdf5, .pdf6,.pdf7, .pdf8, .pdf9, .pdf10, .pdf11, .pdf12, .pdf13, .pdf14, .pdf15{
+    width: 15%;
+    margin-left: 4%;
+    margin-top: 14px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.img1A{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    margin-bottom: 0px;
+}
+
+.display{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.thumb1, a.thumb2, a.thumb3, a.thumb4, a.thumb5, a.thumb6, a.thumb7, a.thumb8, a.thumb9, a.thumb10, a.thumb11,
+ a.thumb12, a.thumb13, a.thumb14, a.thumb15 {
+  position:relative;
+ display:block;
+  width:100%;
+  height:100%;
+  }
+
+.popup1, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7, .popup8, .popup9, .popup10, .popup11, .popup12,
+ .popup13, .popup14, .popup15{
+    width: 100%;
+    display: none;
+    z-index: 1000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -42%;
+    text-align: center;
+    background: #c0c0c0;
+/* your styles */
+}
+
+.close_popup{
+     border: 2px solid black;
+    border-radius: 2px;
+    background: gold;
+    width: 6.2em;
+    height: 1.5vw;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.0em;
+    margin-left: 1.0em;
+    margin-bottom: 0em;
+    transition: 0.6s;
+   text-align: center;
+    overflow: hidden;
+    padding:3px 5px;;
+
+}

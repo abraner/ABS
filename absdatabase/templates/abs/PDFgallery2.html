@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/pdfgallery.css">
+    <title>ABS Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/black.jpg')">
+<section id="workarea1">
+    <div class="container">
+        <div class="container1">
+        </div>
+        <div class="container2">
+            <form class="form2" method="post">
+                <h1 id="formh2">PDF Gallery</h1>
+                <h6 class="formh4">( A total of 15 images are allowed )</h6>
+                <h6 class="formh4">( Click on photo to enlarge )</h6>
+                <div class="display">
+                    <div class="pdf1">
+                        {% for obj in pdf1 %}
+                        <a class="thumb1" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup1">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf2">
+                        {% for obj in pdf2 %}
+                        <a class="thumb2" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup2">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf3">
+                        {% for obj in pdf3 %}
+                        <a class="thumb3" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup3">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf4">
+                        {% for obj in pdf4 %}
+                        <a class="thumb4" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup4">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf5">
+                        {% for obj in pdf5 %}
+                        <a class="thumb5" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup5">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf6">
+                        {% for obj in pdf6 %}
+                        <a class="thumb6" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup6">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf7">
+                        {% for obj in pdf7 %}
+                        <a class="thumb7" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup7">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf8">
+                        {% for obj in pdf8 %}
+                        <a class="thumb8" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup8">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf9">
+                        {% for obj in pdf9 %}
+                        <a class="thumb9" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup9">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf10">
+                        {% for obj in pdf10 %}
+                        <a class="thumb10" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup10">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf11">
+                        {% for obj in pdf11 %}
+                        <a class="thumb11" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup11">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf12">
+                        {% for obj in pdf12 %}
+                        <a class="thumb12" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup12">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf13">
+                        {% for obj in pdf13 %}
+                        <a class="thumb13" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup13">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                   <div class="pdf14">
+                        {% for obj in pdf14 %}
+                        <a class="thumb14" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup14">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+                    <div class="pdf15">
+                        {% for obj in pdf15 %}
+                        <a class="thumb15" href='{{ obj.pdfs.url }}' >
+                            <img  src='{{ obj.pdfs.url }}'/>
+                        </a>
+                    </div>
+                    <div class="popup15">
+                        <div class="close_popup">close</div>
+                        <img  src='{{ obj.pdfs.url }}'>
+                         {% endfor %}
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="container3">
+            <a id="back"  href="{{ instance.get_absolute4_url }}">Back</a>
+        </div>
+    </div>
+</section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+$('.btn9').on('click', function(){
+
+   $('.popup2').hide() // close popup
+
+})
+
+
+$('a.thumb1').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup1 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup1').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup1').hide() // close popup
+
+})
+
+$('a.thumb2').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup2 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup2').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup2').hide() // close popup
+
+})
+
+$('a.thumb3').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup3 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup3').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup3').hide() // close popup
+
+})
+
+$('a.thumb4').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup4 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup4').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup4').hide() // close popup
+
+})
+
+$('a.thumb5').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup5 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup5').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup5').hide() // close popup
+
+})
+
+$('a.thumb6').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup6 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup6').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup6').hide() // close popup
+
+})
+
+$('a.thumb7').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup7 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup7').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup7').hide() // close popup
+
+})
+
+$('a.thumb8').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup8 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup8').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup8').hide() // close popup
+
+})
+
+$('a.thumb9').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup9 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup9').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup9').hide() // close popup
+
+})
+
+$('a.thumb10').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup10 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup10').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup10').hide() // close popup
+
+})
+
+$('a.thumb11').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup11 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup11').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup11').hide() // close popup
+
+})
+
+$('a.thumb12').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup12 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup12').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup12').hide() // close popup
+
+})
+
+$('a.thumb13').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup13 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup13').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup13').hide() // close popup
+
+})
+
+$('a.thumb14').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup14 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup14').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup14').hide() // close popup
+
+})
+
+$('a.thumb15').on('click',function(){ // when press link
+
+   var fullpdf = $(this).attr('href') // get full size pdf url
+   $('.popup15 pdf').attr('src', fullpdf) // image in popup now has source that you need
+   $('.popup15').show() // popup appears
+   return false // do not redirect
+
+})
+
+$('.close_popup').on('click', function(){
+
+   $('.popup15').hide() // close popup
+
+})
+
+</script>

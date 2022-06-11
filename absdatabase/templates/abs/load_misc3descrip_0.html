@@ -1,0 +1,32 @@
+<input id="miscdescription3" value="{{ miscdescription3A.miscdescription3 }}">
+
+<script>
+$(document).ready(function() {
+    if ($('#id_miscqty3').val() ==0)  $("#miscdescription3").attr("disabled", true).css('background-color', '#e1e1e1');
+    $("#miscdescription3").focus();
+
+
+});
+
+
+$(function(){
+    $('#miscdescription3').blur(function(){
+                var selectBox =document.getElementById('miscdescription3');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                $("#miscdescription3").css('background-color', 'white');
+                $("#miscmat3").css('background-color', '#66d09a').attr("disabled", false).css('color', 'black');
+                $("#miscmat3").focus();
+                var url = $(".form2").attr("misc3descrip-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            miscdescription3: $('#miscdescription3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+</script>

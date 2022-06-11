@@ -1,0 +1,106 @@
+<input id="misclabor2" value="{{ misclabor2A.misclabor2 }}">
+
+<script>
+$(document).ready(function() {
+    if ($('#id_miscqty2').val() ==0)  $("#misclabor2").attr("disabled", true).css('background-color', '#e1e1e1');
+    $("#misclabor2").focus();
+
+});
+
+
+$(function(){
+    $('#misclabor2').blur(function(){
+                var selectBox =document.getElementById('misclabor2');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                $("#misclabor2").css('background-color', 'white');
+                //$("#misclabor2").css('background-color', '#66d09a').attr("disabled", false).css('color', 'black');
+                $("#id_miscqty3").focus();
+                var url = $(".form2").attr("misc2labor-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            misclabor2: $('#misclabor2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#misclabor2').blur(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('misclabor2');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                var url = $(".form2").attr("misctotal-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            misclabor2: $('#misclabor2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+$(function(){
+    $('#misclabor2').blur(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('misclabor2');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            misclabor2: $('#misclabor2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 400);
+    });
+});
+
+
+$(function(){
+    $('#misclabor2').blur(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('misclabor2');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                var url = $(".form2").attr("id_materialcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            misclabor2: $('#misclabor2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#misclabor2').blur(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+
+</script>

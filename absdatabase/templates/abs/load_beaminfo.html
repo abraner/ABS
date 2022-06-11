@@ -1,0 +1,252 @@
+
+<div class="beam-reset">
+
+    <button class="btn btn9" id="beam-reset">Beam Reset</button>
+</div>
+
+
+<div class="beamselect2">
+    <div id="id_beamselect2"></div>
+</div>
+<div class="beamtype">
+    {{ form.beamtype1.errors }}
+    <label class="label_beamtype">Beam Type:</label>
+    {{ beamtype1 }}
+</div>
+<div class="beamsize1">
+    {{ form.beamsize1.errors }}
+    <label class="label_beamsize">Beam Size:</label>
+    {{ beamsize1 }}
+</div>
+<div class="beamtypeA" >
+        {{ form.beamsize1.errors }}
+    <label class="label_beamtype1">Beam Type:</label>
+    {{ form.beamtype1 }}
+</div>
+<div class="beamsizeA">
+    {{ form.beamsize1.errors }}
+    <label class="label_beamsize1">Beam Size:</label>
+    {{ form.beamsize1 }}
+</div>
+
+<script>
+$(document).ready(function() {
+
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("beamselecta-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamselect2").html(data);
+                    }
+               });
+       }, 0);
+
+
+    $("#id_beamtype1").show().css( 'visibility', 'hidden' )
+    $("#id_beamsize1").show().css( 'visibility', 'hidden' )
+    $(".label_beamtype1").show().css( 'visibility', 'hidden' )
+    $(".label_beamsize1").show().css( 'visibility', 'hidden' )
+    });
+
+
+//////////////////////////  Beam Reset  ///////////////////////////////
+$(function(){
+$('button#beam-reset.btn.btn9').click(function(){
+          event.preventDefault()
+          $("#id_beamtype1").attr("disabled", false).css( 'visibility', 'visible' ).css('background-color', '#66d09a')
+      $("#id_beamsize1").attr("disabled", false).css( 'visibility', 'visible' )
+    setTimeout(function(){
+            var urlC = $(".form2").attr("beamreset-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                      $("#bidpage").html(data);
+                     }
+                });
+        }, 0);
+    });
+});
+
+
+
+
+
+$(function(){
+$('button#beam-reset.btn.btn9').click(function(){
+      event.preventDefault()
+      $("button#beam-reset.btn.btn9").show().css( 'visibility', 'hidden' );
+      $(".beamtype").show().css( 'visibility', 'visible' );
+      $(".beamtypeA").show().css( 'visibility', 'hidden' );
+      $(".beamsize1").show().css( 'visibility', 'visible' );
+      $(".beamsizeA").show().css( 'visibility', 'hidden' );
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("beamselecta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                      $("#id_beamselect2").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+$('button#beam-reset.btn.btn9').click(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_disable-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                      $("#id_disable").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+
+
+
+
+
+////////////////////////////  Beam Type  ///////////////////////////////
+
+
+$(function(){
+    $('#id_beamtype1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamtype1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                $("#id_beamtype1").css('background-color', 'white')
+                $("#id_beamsize1").css('background-color', '#66d09a')
+                var url = $(".form2").attr("beamtype-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamtype1: $('#id_beamtype1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_beamtype1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamtype1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("beamsizea-url");
+                    $.ajax({
+                       url: url,
+                       data:{
+                         },
+                         success: function (data) {
+                           $("#id_beamsize1").html(data);
+                         }
+                    });
+        }, 500);
+    });
+});
+
+
+
+
+
+////////////////////////////  Beam Size  ///////////////////////////////
+
+$(function(){
+    $('#id_beamsize1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamsize1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                $("#id_beamsize1").css('background-color', 'white')
+                var url = $(".form2").attr("beamsize-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamsize1: $('#id_beamsize1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_beamsize1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamsize1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("beamsizea-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamsize1: $('#id_beamsize1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 1000);
+    });
+});
+
+
+$(function(){
+$('#id_beamsize1').change(function(){
+      //event.preventDefault()
+      $("button#beam-reset.btn.btn9").show().css( 'visibility', 'visible' );
+      $("#id_beamtype1").attr("disabled", "true")
+      $("#id_beamsize1").attr("disabled", "true")
+    setTimeout(function(){
+            var urlC = $(".form2").attr("beamselecta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                      $("#id_beamselect2").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+$('#id_beamsize1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_disable-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                      $("#id_disable").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+
+
+
+</script>

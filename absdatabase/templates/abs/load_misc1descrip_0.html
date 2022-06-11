@@ -1,0 +1,34 @@
+<input id="miscdescription1" value="{{ miscdescription1A.miscdescription1 }}">
+
+<script>
+$(document).ready(function() {
+
+    if ($('#id_miscqty1').val() >0)  $("#miscdescription1").attr("disabled", false).css('background-color', '#66d09a').focus();
+    if ($('#id_miscqty1').val() ==0)  $("#miscdescription1").attr("disabled", true).css('background-color', '#e1e1e1');
+
+
+
+});
+
+
+$(function(){
+    $('#miscdescription1').blur(function(){
+                var selectBox =document.getElementById('miscdescription1');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                $("#miscdescription1").css('background-color', 'white');
+                $("#miscmat1").css('background-color', '#66d09a').attr("disabled", false).css('color', 'black').focus();
+                //$("#miscmat1").focus();
+                var url = $(".form2").attr("misc1descrip-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            miscdescription1: $('#miscdescription1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+</script>

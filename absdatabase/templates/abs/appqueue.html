@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/appqueue.css">
+    {% block head %}
+    <title>WSC | Appointment Queue</title>
+    {% endblock %}
+
+</head>
+<body  style="background-image: url('../../../../img/black.jpg')">
+<div id="workarea1">
+    <div class="container">
+        <div class="container1">
+        </div>
+        <div class="container2">
+        <h1 id="formh1">Appointment Queue</h1>
+        <a id="back"  href="../1/main">Back</a>
+        <form id="form3" method="post">
+        <div id="menu2">
+            <div id="header1">
+                <div id="A">ID</div>
+                <div id="C">First Name</div>
+                <div id="D">Last Name</div>
+                <div id="E">Address</div>
+                <div id="G">City</div>
+                <div id="H">App. Date</div>
+                <div id="I">App. Time</div>
+                <div id="J">Delete Appt.</div>
+            </div>
+            <section id="sec1"></section>
+            <section id="sec2"></section>
+            <section id="sec3"></section>
+            <section id="sec4"></section>
+            <section id="sec5"></section>
+            <section id="sec6"></section>
+            <section id="sec7"></section>
+            <section id="sec8"></section>
+            <section id="sec9"></section>
+            <section id="sec10"></section>
+            <section id="sec11"></section>
+            <section id="sec12"></section>
+            <section id="sec13"></section>
+            <form id="form1" method="post">
+                <div class="form-rowrm1">
+                    {% for obj in cust1 %}
+                    <div id="custid1">
+                        <a id="id_custid1" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname1">
+                        <div id="id_firstname1">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname1">
+                        <div id="id_lastname1">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd11">
+                        <div id="id_custadd11">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity1">
+                         <div id="id_custcity1">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue1 %}
+                    <div id="appdate1">
+                        <div id="id_appdate1">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime1">
+                        <div id="id_apptime1">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete1">
+                        <a class="btn btn9" id="id_delete1" href="{{ obj.get_absolute23_url }}">Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm2">
+                    {% for obj in cust2 %}
+                    <div id="custid2">
+                        <a id="id_custid2" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname2">
+                        <div id="id_firstname2">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname2">
+                        <div id="id_lastname2">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd12">
+                        <div id="id_custadd12">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity2">
+                         <div id="id_custcity2">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue2 %}
+                    <div id="appdate2">
+                        <div id="id_appdate2">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime2">
+                        <div id="id_apptime2">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete2">
+                        <a class="btn btn9" id="id_delete2" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm3">
+                    {% for obj in cust3 %}
+                    <div id="custid3">
+                        <a id="id_custid3" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname3">
+                        <div id="id_firstname3">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname3">
+                        <div id="id_lastname3">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd13">
+                        <div id="id_custadd13">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity3">
+                         <div id="id_custcity3">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue3 %}
+                    <div id="appdate3">
+                        <div id="id_appdate3">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime3">
+                        <div id="id_apptime3">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete3">
+                        <a class="btn btn9" id="id_delete3" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm4">
+                    {% for obj in cust4 %}
+                    <div id="custid4">
+                        <a id="id_custid4" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname4">
+                        <div id="id_firstname4">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname4">
+                        <div id="id_lastname4">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd14">
+                        <div id="id_custadd14">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity4">
+                         <div id="id_custcity4">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue4 %}
+                    <div id="appdate4">
+                        <div id="id_appdate4">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime4">
+                        <div id="id_apptime4">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete4">
+                        <a class="btn btn9" id="id_delete4" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm5">
+                    {% for obj in cust5 %}
+                    <div id="custid5">
+                        <a id="id_custid5" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname5">
+                        <div id="id_firstname5">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname5">
+                        <div id="id_lastname5">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd15">
+                        <div id="id_custadd15">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity5">
+                         <div id="id_custcity5">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue5 %}
+                    <div id="appdate5">
+                        <div id="id_appdate5">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime5">
+                        <div id="id_apptime5">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete5">
+                        <a class="btn btn9" id="id_delete5" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm6">
+                    {% for obj in cust6 %}
+                    <div id="custid6">
+                        <a id="id_custid6" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname6">
+                        <div id="id_firstname6">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname6">
+                        <div id="id_lastname6">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd16">
+                        <div id="id_custadd16">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity6">
+                         <div id="id_custcity6">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue6 %}
+                    <div id="appdate6">
+                        <div id="id_appdate6">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime6">
+                        <div id="id_apptime6">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete6">
+                        <a class="btn btn9" id="id_delete6" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm7">
+                    {% for obj in cust7 %}
+                    <div id="custid7">
+                        <a id="id_custid7" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname7">
+                        <div id="id_firstname7">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname7">
+                        <div id="id_lastname7">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd17">
+                        <div id="id_custadd17">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity7">
+                         <div id="id_custcity7">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue7 %}
+                    <div id="appdate7">
+                        <div id="id_appdate7">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime7">
+                        <div id="id_apptime7">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete7">
+                        <a class="btn btn9" id="id_delete7" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm8">
+                    {% for obj in cust8 %}
+                    <div id="custid8">
+                        <a id="id_custid8" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname8">
+                        <div id="id_firstname8">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname8">
+                        <div id="id_lastname8">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd18">
+                        <div id="id_custadd18">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity8">
+                         <div id="id_custcity8">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue8 %}
+                    <div id="appdate8">
+                        <div id="id_appdate8">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime8">
+                        <div id="id_apptime8">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete8">
+                        <a class="btn btn9" id="id_delete8" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm9">
+                    {% for obj in cust9 %}
+                    <div id="custid9">
+                        <a id="id_custid9" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname9">
+                        <div id="id_firstname9">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname9">
+                        <div id="id_lastname9">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd19">
+                        <div id="id_custadd19">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity9">
+                         <div id="id_custcity9">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue9 %}
+                    <div id="appdate9">
+                        <div id="id_appdate9">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime9">
+                        <div id="id_apptime9">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete9">
+                        <a class="btn btn9" id="id_delete9" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm10">
+                    {% for obj in cust10 %}
+                    <div id="custid10">
+                        <a id="id_custid10" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname10">
+                        <div id="id_firstname10">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname10">
+                        <div id="id_lastname10">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd110">
+                        <div id="id_custadd110">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity10">
+                         <div id="id_custcity10">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue10 %}
+                    <div id="appdate10">
+                        <div id="id_appdate10">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime10">
+                        <div id="id_apptime10">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete10">
+                        <a class="btn btn9" id="id_delete10" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm11">
+                    {% for obj in cust11 %}
+                    <div id="custid11">
+                        <a id="id_custid11" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname11">
+                        <div id="id_firstname11">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname11">
+                        <div id="id_lastname11">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd111">
+                        <div id="id_custadd111">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity11">
+                         <div id="id_custcity11">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue11 %}
+                    <div id="appdate11">
+                        <div id="id_appdate11">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime11">
+                        <div id="id_apptime11">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete11">
+                        <a class="btn btn9" id="id_delete11" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm12">
+                    {% for obj in cust12 %}
+                    <div id="custid12">
+                        <a id="id_custid12" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname12">
+                        <div id="id_firstname12">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname12">
+                        <div id="id_lastname12">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd112">
+                        <div id="id_custadd112">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity12">
+                         <div id="id_custcity12">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue12 %}
+                    <div id="appdate12">
+                        <div id="id_appdate12">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime12">
+                        <div id="id_apptime12">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete12">
+                        <a class="btn btn9" id="id_delete12" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="form-rowrm13">
+                    {% for obj in cust13 %}
+                    <div id="custid13">
+                        <a id="id_custid13" href="{{ obj.get_absolute4_url }}" >{{ obj.custid }}</a>
+                    </div>
+                    <div id="firstname13">
+                        <div id="id_firstname13">{{ obj.custfirstname }}</div>
+                    </div>
+                    <div id="lastname13">
+                        <div id="id_lastname13">{{ obj.custlastname }}</div>
+                    </div>
+                    <div id="custadd113">
+                        <div id="id_custadd113">{{ obj.custadd1 }}</div>
+                    </div>
+                    <div id="custcity13">
+                         <div id="id_custcity13">{{ obj.custcity }}</div>
+                    </div>
+                    {% endfor %}
+                    {% for obj in appqueue13 %}
+                    <div id="appdate13">
+                        <div id="id_appdate13">{{ obj.appdate }}</div>
+                    </div>
+                    <div id="apptime13">
+                        <div id="id_apptime13">{{ obj.apptime }}</div>
+                    </div>
+                    <div id="delete13">
+                        <a class="btn btn9" id="id_delete13" href="{{ obj.get_absolute23_url }}">Delete</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+        </form>
+     </div>
+<div class="container3">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script>
+
+
+
+function change(url) {
+    window.history.pushState('new', 'title', url);
+}
+
+
+$(document).ready(function() {
+if ($('#id+custid1').val() =='121') $("#custid1").css('background-color', '#66d09a')
+
+
+});
+</script>

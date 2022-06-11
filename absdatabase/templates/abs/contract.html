@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/contract.css">
+    <title>ABS Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/black.jpg')">
+<section id="workarea1">
+    <div class="container">
+        <div class="container1">
+
+        </div>
+        <div class="container2">
+            <div class="outerdiv">
+                <form class="form2" method="post"
+                      depositterms-url="{% url 'absdatabase:depositterms' instance.bidid %}"
+                      deposittermsa-url="{% url 'absdatabase:load_depositterms' instance.bidid %}"
+                      terms2-url="{% url 'absdatabase:terms2' instance.bidid %}"
+                      terms2a-url="{% url 'absdatabase:load_terms2' instance.bidid %}"
+                      terms3-url="{% url 'absdatabase:terms3' instance.bidid %}"
+                      terms3a-url="{% url 'absdatabase:load_terms3' instance.bidid %}"
+                      termsfinal-url="{% url 'absdatabase:termsfinal' instance.bidid %}"
+                      termsfinala-url="{% url 'absdatabase:load_termsfinal' instance.bidid %}"
+                      customdeposit-url="{% url 'absdatabase:customdeposit' instance.bidid %}"
+                      customdepositA-url="{% url 'absdatabase:load_depositamount' instance.bidid %}"
+                      cdp-url="{% url 'absdatabase:cdp' instance.bidid %}"
+                      seconddeposit-url="{% url 'absdatabase:seconddeposit' instance.bidid %}"
+                      seconddepositA-url="{% url 'absdatabase:load_secondamount' instance.bidid %}"
+                      secdp-url="{% url 'absdatabase:secdp' instance.bidid %}"
+                      thirddeposit-url="{% url 'absdatabase:thirddeposit' instance.bidid %}"
+                      thirddepositA-url="{% url 'absdatabase:load_thirdamount' instance.bidid %}"
+                      thirddp-url="{% url 'absdatabase:thirddp' instance.bidid %}"
+                      finalpaymentc-url="{% url 'absdatabase:load_finalpayment' instance.bidid %}"
+                >
+                    <div class="headercontainer">
+                        <div class="img"><img class="img1" src='../../../img/ABS_horizontal_logos_2.gif'></div>
+                        <div class="slogan">
+                            <div class="slogan1">The</div>
+                            <div class="slogan2">STANDARD</div>
+                            <div class="slogan3">in Structural Renovation</div>
+                        </div>
+                    </div>
+                    <div class="companyinfo">
+                        <div id="address">15531 S. 70th Ct. Orland Park, IL 60462</div>
+                        <div id="phonenum">
+                            <div id="office">Office: (708) 966-4000</div>
+                        </div>
+                        <div id="email">inquiries@abeamsteel.com</div>
+                    </div>
+                    <div id="header2">
+                        <div class="custid">
+                        {{ form.custid.errors }}
+                        <label id="label_custid">Cust ID:</label>
+                        {{ form.custid }}
+                        </div>
+                        <div id="header3">
+                            <div id="abs1"> American Beam & Steel, Inc.</div>
+                            <div id="abs2">( Contractor )</div>
+                            <div id="abs3">Terms & Conditons</div>
+                        </div>
+                    </div>
+                    <div id="customerinfo">
+                         {% csrf_token %}
+                        {{ form.name_of_field }}
+                        {% for obj in object_list %}
+                    <div id="custname">
+                        <div class="custfirstname">
+                            {{ obj.custfirstname }}
+                        </div>
+                        <div class="custlastname">
+                            {{ obj.custlastname }}
+                        </div>
+                        <div id="owner">
+                            (Owner)
+                        </div>
+                    </div>
+                    <div class="custadd">
+                        {{ obj.custadd1 }}
+                    </div>
+                    <div class="custcity">
+                        {{ obj.custcity }},
+                        {{ obj.custst }}
+                        {{ obj.custzipcode }}
+                    </div>
+                        <div class="custcell">
+                        {{ obj.custcell1 }}
+                    </div>
+                        <div class="custemail">
+                        {{ obj.custemail1 }}
+                    </div>
+                    {% endfor %}
+                    </div>
+                    <div class="sectionheader">
+                        Payment Schedule
+                    </div>
+                    <div id="payoutline">
+                        {% for obj in object_list2 %}
+                        <div id="id_workorderdate">
+                            {{ obj.date }}
+                        </div>
+                        <div class="header3">
+                            <div class="header3A">
+                                <div id="line1">Total Cost of Renovation</div>
+                                <div id="line2">(per Agreement # {{ obj.id }})</div>
+                            </div>
+                            <div id="grandtotal">
+                                <input id="id_grandtotalcost" value="{{ obj.grandtotalcost }}">
+                            </div>
+                        </div>
+                        <div id="depositA">
+                            <div id="depositlabel">Deposit</div>
+                            <select id="depositterms"></select>
+                            <div id="deposit"></div>
+                        </div>
+                        <div id="payment2A">
+                            <div id="payment2label">2nd Payment</div>
+                            <select id="terms2"></select>
+                            <div id="payment2"></div>
+                        </div>
+                        <div id="payment3A">
+                            <div id="payment3label">3rd Payment</div>
+                            <select id="terms3"></select>
+                            <div id="payment3"></div>
+                        </div>
+                        <div id="paymentfinalA">
+                            <div id="finallabel">Final Payment</div>
+                            <select id="termsfinal"></select>
+                            <div id="finalpayment"></div>
+                        </div>
+                            {% endfor %}
+                    </div>
+                    <div class="sectionheader">Payment Terms</div>
+                        <div class="section1">
+                            <ul><li><div class="section1A">Owner is to make the Final Payment in accordance with the
+                                above Payment Schedule.</div></li>
+                        <br>
+                                <li><div class="section1A">The Final payment is to be made on the same day that work has
+                                    been completed.</div></li>
+                        <br>
+                        <li><div class="section1A">Payment accepted by check, funds transfer, and all major credit cards
+                            (+3% fee assessed). For
+                        payments made by check, please make payable to American Beam & Steel, Inc. We also accept funds
+                            transfer via the <b>Zelle network</b> using our administrative email address <b>admin@abeamsteel.com,</b> register us as a
+                                recipient.</div></li></ul>
+                    </div>
+                    <div class="sectionheader">Owner</div>
+                    <div class="section1">
+                        <ul><li><div class="section1A">The Contractor assumes that the existing mechanical systems are in
+                        serviceable condition.</div></li>
+                    <br>
+                        <li><div class="section1A">The Owner is to provide water and electricity for renovation. The
+                        Owner shall also provide
+                        access to work areas, cover or remove any items that may impede access or be damaged by dust
+                        as a result of the Work being performed.</div></li></ul>
+                    </div>
+                    <div class="sectionheader">Contractor</div>
+                    <div class="section1">
+                        <ul><li><div class="section1A"> The Contractor shall supervise and direct the Work, using the Contractor's best skill and
+                        attention. The Contractor shall be solely responsible for and shall have control over
+                        construction means, methods, techniques, sequences, and procedures and for coordinating all
+                        portions of the Work under the Contract, unless otherwise provided herein.</div></li>
+                            <br>
+                            <li><div class="section1A">Out of the Final Payment made by the Owner to Contractor, the Contactor shall provide and
+                                pay for the Cost of the Work.</div></li></ul>
+                    </div>
+                    <div class="page1" >1 of 3</div>
+
+                </form>
+                <div class="rm-modal" style="display: none">
+                    <div class="modal-content">
+                        <h3 class="modaltitle">Enter deposit amount or pick a percentage.</h3>
+                        <div id="depositvalue">
+                            <div id="custom_0">
+                                {{ form.customdeposit.errors }}
+                                {{ form.customdeposit }}
+                            </div>
+                            <div id="depositperc">
+                                {{ form.depositperc.errors }}
+                                {{ form.depositperc }}
+                            </div>
+                        </div>
+                        <button type="button" class="button4">Accept Amount</button>
+                        <button type="button" class="button5">Cancel</button>
+                    </div>
+                </div>
+                <div class="rm-modal2" style="display: none">
+                    <div class="modal-content">
+                        <h3 class="modaltitle">Enter 2nd payment amount or pick a percentage.</h3>
+                        <div id="value2">
+                            <div id="value_2">
+                                {{ form.seconddeposit.errors }}
+                                {{ form.seconddeposit }}
+                            </div>
+                            <div id="perc2">
+                                {{ form.pay2perc.errors }}
+                                {{ form.pay2perc }}
+                            </div>
+                        </div>
+                        <button type="button" class="button42">Accept Amount</button>
+                        <button type="button" class="button52">Cancel</button>
+                    </div>
+                </div>
+                <div class="rm-modal3" style="display: none">
+                    <div class="modal-content">
+                        <h3 class="modaltitle">Enter 3rd payment amount or pick a percentage.</h3>
+                        <div id="value3">
+                            <div id="value_3">
+                                {{ form.thirddeposit.errors }}
+                                {{ form.thirddeposit }}
+                            </div>
+                            <div id="perc3">
+                                {{ form.pay3perc.errors }}
+                                {{ form.pay3perc }}
+                            </div>
+                        </div>
+                        <button type="button" class="button43">Accept Amount</button>
+                        <button type="button" class="button53">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="outerdiv">
+                <div class="headercontainer">
+                    <div class="img"><img class="img1" src='../../../img/ABS_horizontal_logos_2.gif'></div>
+                    <div class="slogan">
+                        <div class="slogan1">The</div>
+                        <div class="slogan2">STANDARD</div>
+                        <div class="slogan3">in Structural Renovation</div>
+                    </div>
+                </div>
+                <div class="section1">
+                       <ul><li><div class="section1A">The Contractor shall enforce strict discipline and good order among the Contractor's
+                           employees and other persons carrying out the Contract.</div></li>
+                    <br>
+		       <li><div class="section1A">The contractor shall keep the premises and surrounding area free of waste materials or
+			rubbish caused by operations under the Contract.  At completion of the work the contractor shall remove from the premises the Project
+			waste materials, rubbish, Contractor’s tools, construction equipment, machinery, and surplus materials. The Contractor shall provide
+                   the Owner reasonable access to the Work being performed.</div></li></ul>
+		     </div>
+
+  		    <div class="sectionheader">Timetable & Cancellation</div>
+		    <div class="section1">
+                <ul><li><div class="section1A">This proposal may be withdrawn at any time prior to written acceptance by both Owner and Contractor.</div></li>
+		     <br>
+		       <li><div class="section1A">Owner may cancel this transaction, without penalty or obligation, within three (3) business days after signing this Agreement and
+                   Contractor has received the initial payment.  Beyond this three (3) day cancellation period, initial payment is non-refundable.</div></li>
+		     <br>
+                    <li><div class="section1A">The Contractor expects the Work to be completed within one (1) calendar day upon commencement of the project (“Timetable”).</div></li>
+		     <br>
+		       <li><div class="section1A">The Timetable stated in this Agreement is of the essence of the Contract.  By executing the Agreement, the Contractor confirms that
+                   the Timetable is a reasonable period for performing the Work.</div></li>
+		     <br>
+		       <li><div class="section1A">If the Contractor is delayed at any time in progress of the Work by changes ordered in the Work, by any outside interference such as,
+			but not limited to, labor disputes, fire, unusual delay in deliveries, abnormal adverse weather conditions not reasonably anticipatable,
+                   unavoidable casualties or any causes beyond the Contractor’s control, then the Timetable shall be extended for such reasonable time.</div></li></ul>
+		     </div>
+ 		    <div class="sectionheader">Release of Claims</div>
+		    <div class="section1">
+                <ul><li><div class="section1A"><b>Finish Work</b> – Unless specifically stated herein, the Owner is responsible for finish work of all areas that may be impacted by Work.
+                    This includes but is not limited to painting; wall coverings; patching of drywall or plaster; replacement of hardwood flooring; floor, tile or carpeting.</div>
+           <br>
+		       <li><div class="section1A"><b>Degree of Leveling</b> – Contractor employs all means possible in leveling the floor structure or ceiling structure as part of the Work being
+			performed and sets expectations, in advance, based on the severity of problems.  The Owner shall not hold Contractor liable for the degree of leveling achieved.</div></li>
+            <br>
+		       <li><div class="section1A"><b>Electrical</b> - Contractor may be required to disconnect and/or remove electrical service (conduit/wiring/lighting) affixed to structural beams
+			and/or columns impacted by Work.  Reconnection of electrical services disconnected as a result of work being performed shall be at the Owners’ expense.</div></li>
+                <br>
+		       <li><div class="section1A"><b>Plumbing</b> – Contractor uses reasonable care when locating and securing existing plumbing structures as part of the Work being performed.
+			Inferior connections or visible signs of corrosion around plumbing joints (indicating prior leaking) are susceptible to leaking upon the slightest movement.
+			Repair of minor leaking of pipes as a result of work being performed shall be at the Owners’ expense.</div></li>
+            <br>
+		      <li><div class="section1A"><b>Renovation Photographs</b> – The Owner authorizes Contractor to photograph Owner’s property in the context of renovation and to use photos
+			and/or time-lapse video for Contractor promotion on websites, without compensation to Owner.  Contractor to maintain anonymity and confidentiality of
+			Owner in such use of digital medium.</div></li></ul>
+		     </div>
+
+                <div class="page1" >2 of 3</div>
+            </div>
+            <div class="outerdiv">
+                <div class="headercontainer">
+                    <div class="img"><img class="img1" src='../../../img/ABS_horizontal_logos_2.gif'></div>
+                    <div class="slogan">
+                        <div class="slogan1">The</div>
+                        <div class="slogan2">STANDARD</div>
+                        <div class="slogan3">in Structural Renovation</div>
+                    </div>
+                </div>
+                <div class="sectionheader">Insurance</div>
+		    <div class="section1">
+		       <ul><li><div class="section1A">The Owner shall be responsible for purchasing and maintaining the Owner’s usual liability insurance.</div></li>
+		     <br>
+		       <li><div class="section1A">The Owner and Contractor waive all rights against each other and any of their subcontractors, subcontractors ’agents and employees, for damages
+			not associated with the Scope of Work.</div></li>
+		     <br>
+		       <li><div class="section1A">The Contractor is lawfully authorized to do business in the State of Illinois and Indiana.  Certificates of Liability Insurance shall be filed
+			with the Owner prior to the commencement of the Work.  This Insurance shall be written for an amount not less than limits of liability required by
+			the City of Chicago or those required by law, whichever coverage is greater.</div></li></ul>
+		     </div>
+                <div class="sectionheader">Warranty</div>
+		    <div class="section1">
+		       <ul><li><div class="section1A">At the time of Final Payment, Contractor shall furnish the Owner its 25-year warranty.  Any claims of warranty are dependent upon full and
+			prompt payment as outlined in Payment Schedule.</div></li>
+		     <br>
+		       <li><div class="section1A">Incomplete or late payments (30 days or more) will void any claims of warranty.  This warranty is fully transferrable to new owners in the sale of the property.</div></li>
+		    <br>
+		       <li><div class="section1A">Should Work be modified in any way, without prior consent from Contractor, The Contractor’s 25-year warranty shall be declared null and void.</div></li></ul>
+			</div>
+
+
+  		    <div class="sectionheader">Acceptance of Terms</div>
+		    <div class="section1">
+                <ul><li><div class="section1A"><b>Owner acknowledges that I have read these General Terms and Conditions, and hereby accept.</b></div></li></ul>
+		     </div>
+                <div class="signiture">
+                    <div class="owner">
+                        <div class="owner1">Owner:</div>
+                        <div class="name">
+                            {% for obj in object_list %}
+                            <div class="custfirstname">
+                                {{ obj.custfirstname }}
+                            </div>
+                            <div class="custlastname">
+                                {{ obj.custlastname }}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <br>
+                        <br>
+                        <div class="line">_______________________________________</div>
+                        <div class="signature">[ Signature ]</div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="line">_______________________________________</div>
+                        <div class="signature">[ Date ]</div>
+                    </div>
+                    <div class="contractor">
+                        <div class="owner1">Contractor:</div>
+                        <div class="owner1">American Beam & Steel, Inc.</div>
+                        <br>
+                        <br>
+                        <div class="line">_______________________________________</div>
+                        <div class="signature">[ Mark Hopman, President ]</div>
+                        <br>
+                        <br>
+                            {% for obj in object_list %}
+                            {{ obj.date }}
+                        <div class="line">_______________________________________</div>
+                        <div class="signature">[ Date ]</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="page3" >3 of 3</div>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="button1">
+                <a class="back"  href="{{ instance.get_absolute4_url }}">Back</a>
+                <button class="gencon" onclick="window.print()">Print</button>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+$(document).ready(function() {
+
+var x = document.getElementById("id_grandtotalcost").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("id_grandtotalcost").value = x;
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("deposittermsa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#depositterms").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("terms2a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#terms2").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("terms3a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#terms3").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("termsfinala-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#termsfinal").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("customdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#deposit").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("seconddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment2").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("thirddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment3").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+        }, 0);
+
+});
+
+////////////////// Deposit Terms //////////////////////////////////////
+
+$(function(){
+    $('#depositterms').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('depositterms');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("depositterms-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            depositterms: $('#depositterms').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#terms2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('terms2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("terms2-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            terms2: $('#terms2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#terms3').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('terms3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("terms3-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            terms3: $('#terms3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('#termsfinal').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('termsfinal');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("termsfinal-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            termsfinal: $('#termsfinal').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+////////////////// Button 4 //////////////////////////////////////
+
+$(function(){
+    $('.button4').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_customdeposit');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("customdeposit-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_customdeposit: $('#id_customdeposit').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal").hide()
+
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('.button4').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("customdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#deposit").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+
+$(function(){
+    $('.button4').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+////////////////// Button 5 //////////////////////////////////////
+
+$(function(){
+    $('.button5').click(function(){
+    $(".rm-modal").hide()
+
+    });
+});
+
+$(function(){
+    $('.button52').click(function(){
+        $(".rm-modal2").hide()
+    });
+});
+
+$(function(){
+    $('.button53').click(function(){
+        $(".rm-modal3").hide()
+    });
+});
+
+////////////////// Deposit Percent //////////////////////////////////////
+
+
+$(function(){
+    $('#id_depositperc').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_depositperc');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("cdp-url");
+
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_depositperc: $('#id_depositperc').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+$(".rm-modal").hide()
+        }, 200);
+    });
+});
+
+
+$(function(){
+        $('#id_depositperc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("customdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#deposit").html(data);
+                     }
+                });
+
+        }, 500);
+    });
+});
+
+$(function(){
+    $('#id_depositperc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+////////////////// 2nd Payment Percent //////////////////////////////////////
+
+$(function(){
+    $('.button42').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_seconddeposit');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("seconddeposit-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_seconddeposit: $('#id_seconddeposit').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal2").hide()
+
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('.button42').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("seconddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment2").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+
+$(function(){
+    $('.button42').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_pay2perc').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_pay2perc');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("secdp-url");
+
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_pay2perc: $('#id_pay2perc').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+$(".rm-modal2").hide()
+        }, 200);
+    });
+});
+
+
+$(function(){
+        $('#id_pay2perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("seconddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment2").html(data);
+                     }
+                });
+
+        }, 500);
+    });
+});
+
+$(function(){
+    $('#id_pay2perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+////////////////// 3rd Payment Percent //////////////////////////////////////
+
+$(function(){
+    $('.button43').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_thirddeposit');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("thirddeposit-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_thirddeposit: $('#id_thirddeposit').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal3").hide()
+
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('.button43').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("thirddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment3").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+
+$(function(){
+    $('.button43').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_pay3perc').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_pay3perc');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("thirddp-url");
+
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_pay3perc: $('#id_pay3perc').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+$(".rm-modal3").hide()
+        }, 200);
+    });
+});
+
+
+$(function(){
+        $('#id_pay3perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("thirddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment3").html(data);
+                     }
+                });
+
+        }, 500);
+    });
+});
+
+$(function(){
+    $('#id_pay3perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+</script>

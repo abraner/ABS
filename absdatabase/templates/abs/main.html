@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/main.css">
+    <title>WSC | Welcome</title>
+</head>
+<body  style="background-image: url('../../../../img/black.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<div class="container">
+    <div class="img"><img class="img" src='../../../img/ABS Desktop.jpg'></div>
+
+    <div id="title">Welcome</div>
+    <p id="username">{{ user.first_name }} {{ user.last_name }} </p>
+    <form id="form2" >
+        {% csrf_token %}
+        {{ form.as_table }}
+    </form>
+        <div class="containerA">
+            <nav>
+                <div class="container1">
+                </div>
+                <div class="container2">
+                    <a href="/absdatabase/preappoint">
+                        <button type="button" id="addnew" class="btn btn1">Create Appointment</button>
+                    </a>
+                </div>
+                <div class="container3">
+                    <a href="/absdatabase/cust_info_existing">
+                        <button class="dropbtn1" id="search">Existing Customers</button>
+                    </a>
+                </div>
+                <div class="container4">
+               {% if request.user.is_superuser %}
+                <div class="dropdown1">
+                    <button class="dropbtn1" id="admin">Administrative
+                       <span class="caret"></span></button>
+                    <div class="dropdown1-content">
+                        <li><a href="/admin">Security</a></li>
+                    </div>
+                </div>
+                {% else %}
+                {% endif %}
+                </div>
+                 <div class="container7">
+                    <a href="/absdatabase/appqueue">
+                        <button type="button" id="appqueue" class="btn btn1">Appointment Queue</button>
+                    </a>
+                </div>
+                <div class="container5">
+              <a href="/absdatabase/abs">
+                        <button type="button" class="btn btn1">Log Out</button>
+              </a>
+               </div>
+            <div class="container6">
+                </div>
+            </nav>
+            </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    var rowCount = $('#AppQueue').length;
+    if ($('#id_count').val() >0) $("#appqueue.btn.btn1").css('background-color', 'green')
+});
+
+</script>
+</body>
+</html>

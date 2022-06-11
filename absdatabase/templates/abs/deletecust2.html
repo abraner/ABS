@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/deletecust.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<section id="workarea1">
+            <section id="section2"
+            >
+                <h1 id="header">Delete this customer?</h1>
+                <div id="button1">
+                    <a class="button1" href="../deletecust3">Delete</a>
+                    <a class="button2" href="{{ instance.get_absolute7_url }}">No</a>
+                </div>
+
+            </section>
+        </section>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+ $(function(){
+    $('.button1').click(function(){
+        setTimeout(function(){
+                var url = $("#section2").attr("deletecust2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+</script>

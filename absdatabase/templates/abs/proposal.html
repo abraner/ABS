@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/finalinvoice.css">
+    <title>ABS Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/black.jpg')">
+<section id="workarea1">
+    <div class="container">
+        <div class="container1">
+
+        </div>
+        <div class="container2">
+            <div class="outerdiv">
+                <form class="form2" method="post">
+                    <div class="headercontainer">
+                        <div class="img"><img class="img1" src='../../../img/ABS_horizontal_logos_2.gif'></div>
+                        <div class="slogan">
+                            <div class="slogan1">The</div>
+                            <div class="slogan2">STANDARD</div>
+                            <div class="slogan3">in Structural Renovation</div>
+                        </div>
+                    </div>
+                    <div class="companyinfo">
+                        <div id="address">15531 S. 70th Ct. Orland Park, IL 60462</div>
+                        <div id="phonenum">
+                            <div id="office">Office: (708) 966-4000</div>
+                        </div>
+                        <div id="email">inquiries@abeamsteel.com</div>
+                    </div>
+                    <div id="header2">
+                        <div class="custid">
+                        {{ form.custid.errors }}
+                        <label id="label_custid">Cust ID:</label>
+                        {{ form.custid }}
+                        </div>
+                        <div id="header3">
+                            <div id="abs1">Proposal</div>
+
+                        </div>
+                    </div>
+                    <div id="customerinfo">
+                         {% csrf_token %}
+                        {{ form.name_of_field }}
+                        {% for obj in object_list %}
+                    <div id="custname">
+                        <div class="custfirstname">
+                            {{ obj.custfirstname }}
+                        </div>
+                        <div class="custlastname">
+                            {{ obj.custlastname }}
+                        </div>
+                        <div id="owner">
+                            (Owner)
+                        </div>
+                    </div>
+                    <div class="custadd">
+                        {{ obj.custadd1 }}
+                    </div>
+                    <div class="custcity">
+                        {{ obj.custcity }},
+                        {{ obj.custst }}
+                        {{ obj.custzipcode }}
+                    </div>
+                        <div class="custcell">
+                        {{ obj.custcell1 }}
+                    </div>
+                        <div class="custemail">
+                        {{ obj.custemail1 }}
+                    </div>
+                    {% endfor %}
+                    </div>
+                    <div class="sectionheader">
+                        Payment Schedule
+                    </div>
+                    <div id="payoutline">
+                        {% for obj in object_list2 %}
+                        <div id="id_workorderdate">
+                            {{ obj.date }}
+                        </div>
+                        <div class="header3">
+                            <div class="header3A">
+                                <div id="line1">Total Cost of Renovation</div>
+                                <div id="line2">(per Agreement # {{ obj.id }})</div>
+                            </div>
+                            <div id="grandtotal">
+                                <input id="id_grandtotalcost" value="{{ obj.grandtotalcost }}">
+                            </div>
+                        </div>
+                        <div id="depositA">
+                            <div id="depositlabel">Deposit</div>
+                            <select id="depositterms"></select>
+                            <div id="deposit"></div>
+                        </div>
+                        <div id="payment2A">
+                            <div id="payment2label">2nd Payment</div>
+                            <select id="terms2"></select>
+                            <div id="payment2"></div>
+                        </div>
+                        <div id="payment3A">
+                            <div id="payment3label">3rd Payment</div>
+                            <select id="terms3"></select>
+                            <div id="payment3"></div>
+                        </div>
+                        <div id="paymentfinalA">
+                            <div id="finallabel">Final Payment</div>
+                            <select id="termsfinal"></select>
+                            <div id="finalpayment"></div>
+                        </div>
+                            {% endfor %}
+                    </div>
+                    <div class="sectionheader">Payment Terms</div>
+                        <div class="section1">
+                            <ul><li><div class="section1A">Owner is to make the Final Payment in accordance with the
+                                above Payment Schedule.</div></li>
+                        <br>
+                                <li><div class="section1A">The Final payment is to be made on the same day that work has
+                                    been completed.</div></li>
+                        <br>
+                        <li><div class="section1A">Payment accepted by check, funds transfer, and all major credit cards
+                            (+3% fee assessed). For
+                        payments made by check, please make payable to American Beam & Steel, Inc. We also accept funds
+                            transfer via the<b>Zelle network</b> using our administrative email address <b>admin@abeamsteel.com,</b> register us as a
+                                recipient.</div></li></ul>
+                    </div>
+                    <div class="sectionheader">Owner</div>
+                    <div class="section1">
+                        <ul><li><div class="section1A">The Contractor assumes that the existing mechanical systems are in
+                        serviceable condition.</div></li>
+                    <br>
+                        <li><div class="section1A">The Owner is to provide water and electricity for renovation. The
+                        Owner shall also provide
+                        access to work ares, cover or remove any items that may impede access or be damaged by dust
+                        as a result of the Work being performed.</div></li></ul>
+                    </div>
+                    <div class="sectionheader">Contractor</div>
+                    <div class="section1">
+                        <ul><li><div class="section1A"> The Contractor shall supervise and direct the Work, using the Contractor's best skill and
+                        attention. The Contractor shall be solely responsible for and shall have control over
+                        construction means, methods, techniques, sequences, and procedures and for coordinating all
+                        portions of the Work under the Contract, unless otherwise provided herein.</div></li>
+                    <br>
+                        <li><div class="section1A">Out of the Final Payment made by the Owner to Contractor, the Contactor shall provide and
+                        pay for the Cost of the Work.</div></li>
+                    <br>
+                       <li><div class="section1A"> The Contractor shall enforce strict discipline and good order amoung the Contractor's
+                        employees and other persons carrying out the Contract.</div></li></ul>
+                    </div>
+                    <div class="page1" >1 of 3</div>
+
+                </form>
+
+            </div>
+
+        </div>
+        <div class="container3">
+            <div class="button1">
+                <a class="back"  href="{{ instance.get_absolute4_url }}">Back</a>
+                <button class="gencon" onclick="window.print()">Print</button>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+$(document).ready(function() {
+
+var x = document.getElementById("id_grandtotalcost").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("id_grandtotalcost").value = x;
+
+});
+
+
+
+</script>

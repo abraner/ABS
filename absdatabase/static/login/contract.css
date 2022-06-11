@@ -1,0 +1,1559 @@
+/* Global */
+
+@media print{
+
+    .container1, .container3{
+        display: none;
+    }
+
+   .outerdiv {
+        page-break-after : always;
+    }
+
+   .outerdiv {
+        page-break-before : always;
+    }
+
+   .outerdiv2 {
+        page-break-after : always;
+    }
+
+   .outerdiv3 {
+        page-break-after : always;
+    }
+@page{
+    size: 7in 9.25in;
+    margin: 27mm 16mm 27mm 16mm;
+}
+}
+
+
+
+
+
+body{
+    font-family: "Times New Roman";
+    font-size: calc(.75vw + .75vh + .25vmin);
+    padding:0;
+    margin:0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#workarea1{
+    width: 100%;
+
+}
+
+.button1{
+    width:163px;
+    height: 114px;
+    margin-top: 0px;
+    margin-bottom: 931px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button2{
+    width:163px;
+    height: 114px;
+    margin-top: 0px;
+    margin-bottom: 931px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button3{
+    width:163px;
+    height: 114px;
+    margin-top: 0px;
+    margin-bottom: 300px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.back{
+    border: 2px solid black;
+    border-radius: 2px;
+    background: gold;
+    width: 114px;
+    height: 28px;
+    font-size: 18px;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 19px;
+    margin-right: 0px;
+    margin-left:40px;
+    transition: 0.6s;
+    float:left;
+    text-align: center;
+    overflow: hidden;
+    display:inline-block;
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+.back{
+    color: #000000;
+}
+
+.back:hover{
+    color: white;
+    background: green;
+    text-decoration: underline;
+}
+
+button.gencon{
+    border: 2px solid black;
+    border-radius: 2px;
+    background: #00ffff;
+    width: 118px;
+    height: 35px;
+    font-size: 18px;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 19px;
+    margin-right: 0px;
+    margin-left: 40px;
+    transition: 0.6s;
+    float:left;
+    text-align: center;
+    overflow: hidden;
+    display:inline-block;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+button.gencon{
+    color: #000000;
+}
+
+button.gencon:hover{
+    color: white;
+    background: #20B2AA;
+    text-decoration: underline;
+}
+
+
+div.container{
+    width:100%;
+    height:100%;
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+}
+
+
+
+#formh2{
+    height:1.5em;
+    width: 100%;
+    text-align:center;
+    font-size: calc(2.0vw + 2.0vh + .25vmin);
+    margin-top:8vh;
+    margin-bottom:3vh;
+    color:#c0c0c0;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+
+}
+
+
+#formh3{
+    height:1.5em;
+    width: 100%;
+    text-align:center;
+    font-size: 2vw;
+    margin-top:0%;
+    margin-bottom:0px;
+    color:#c0c0c0;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+
+}
+
+#form1{
+    height:61vh;
+    width:94.9%;
+    margin-top:0px;
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+}
+
+#sectionA{
+    width:100%%;
+}
+
+
+
+span.phone-field-ext{
+    display:none;
+}
+
+li::marker{
+    display:none;
+}
+
+.section2{
+    width:100%;
+    height:68vh;
+    margin-top:50px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+
+}
+
+div.container1{
+    flex: 1;
+}
+
+div.container2{
+    width: 800px;
+    height: 3042px;
+    margin-left:auto;
+    margin-right:auto;
+    flex: 1;
+}
+
+div.container3{
+    flex: 1;
+}
+
+.img{
+    width: 30%;
+    margin-left: 29px;
+    margin-top: 14px;
+    margin-bottom: 0px;
+}
+
+
+.img1{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    margin-bottom: 0px;
+}
+
+.slogan{
+    display: flex;
+    margin-left: 27px;
+}
+.slogan1, .slogan3{
+    margin-left: 0px;
+    font-size: 14px;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    color: #004782;
+    padding-right: 3px;
+}
+
+.slogan2{
+    margin-left: 0px;
+    font-size: 14px;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    color: #b92523;
+    padding-right: 3px;
+}
+
+.headercontainer{
+    height: 103px;
+    margin-bottom: 15px;
+    border-bottom: black 2px solid;
+    box-sizing: border-box;
+}
+
+.companyinfo{
+    width: 236px;
+    margin-right: 8px;
+    margin-top: -77px;
+    float: right;
+}
+
+
+
+
+#header2{
+    height: 83px;
+    border-bottom: black 2px solid;
+
+    text-align: center;
+    padding-top: 5px;
+}
+
+#abs1, #abs2, #abs3{
+    font-size: 18px;
+    font-family: "Times New Roman";
+    font-weight: bold;
+
+}
+
+
+.custcontainer{
+    height: 108px;
+    border-bottom: black 2px solid;
+    box-sizing: border-box;
+}
+.memocontainer{
+    height: 533px;
+    border-bottom: black 2px solid;
+    box-sizing: border-box;
+}
+
+.footercontainer{
+    height: 126px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.outerdiv{
+    width: 798px;
+    height: 1033px;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    background:white;
+    position: relative;
+    border: black 2px solid;
+    box-sizing: border-box;
+
+}
+
+.outerdiv2{
+    width: 798px;
+    height: 1033px;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    background:white;
+    position: relative;
+    border: black 2px solid;
+    box-sizing: border-box;
+
+}
+
+.outerdiv3{
+    width: 798px;
+    height: 1033px;
+    margin-top:5px;
+    margin-left:auto;
+    margin-right:auto;
+    background:white;
+    position: relative;
+    border: black 2px solid;
+    box-sizing: border-box;
+
+}
+
+.form2{
+    width: 100%;
+    height:100%;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right:auto;
+    box-sizing: border-box;
+}
+
+
+#address{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1%;
+    color:black;
+    font-weight: bold;
+    text-align:center;
+    font-size: 10px;
+    font-family: "Times New Roman";
+
+}
+
+#phonenum{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#show{
+    width:200px;
+    color:black;
+    font-weight: bold;
+    text-align:right;
+    font-size: 16px;
+    font-family: "Times New Roman";
+    padding-right: 3%;
+}
+
+#office{
+    width:100%;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: "Times New Roman";
+}
+
+#email{
+    width:200px;
+    margin-left: auto;
+    margin-right:auto;
+    color:black;
+    font-weight: bold;
+    text-align:center;
+    font-size: 10px;
+    font-family: "Times New Roman";
+
+}
+
+div.form-rowcustinfo{
+    width:100%;
+    margin-top:-54.6vh;
+}
+
+div.form-rowcustid{
+    width: 169px;
+    margin-top: 4px;
+    margin-left: 0px;
+    padding-left:5px;
+    display: flex;
+}
+
+
+div.form-rowcustid2{
+    width: 169px;
+    margin-top: 6px;
+    margin-left: 0px;
+    padding-left:5px;
+    display: flex;
+}
+
+
+.label_custid{
+    width: 74px;
+    padding-right:0px;
+    padding-top: 0px;
+    color:black;
+    font-weight: bold;
+    text-align:right;
+    font-size: 16px;
+    font-family: "Times New Roman";
+}
+
+.custid{
+    width: 100px;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 14px;
+    padding-top: 0px;
+    padding-right:0px;
+    border: none;
+    font-family: "Arial";
+}
+
+#id_custid{
+    width: 31px;
+    font-size: 14px;
+    border: none;
+
+}
+
+
+
+
+#customerinfo{
+    width: 177px;
+    margin-left: 56px;
+    margin-top: 7px;
+    margin-bottom: 53px;
+
+}
+
+#custname{
+    width: 200px;
+    display: flex;
+}
+
+
+.custfirstname{
+    font-size: 16px;
+    text-align: right;
+    padding-right: 5px;
+    border: none;
+    font-family: "Arial";
+    font-weight: bold;
+}
+
+.custlastname{
+    font-size: 16px;
+    text-align: left;
+    padding-right: 5px;
+    border: none;
+    font-family: "Arial";
+    font-weight: bold;
+
+}
+
+#owner{
+    font-family: "Arial";
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.custadd{
+    font-size: 16px;
+    text-align: left;
+    padding-right: 0px;
+    border: none;
+    font-family: "Arial";
+}
+
+.custcity{
+    font-size: 16px;
+    text-align: left;
+    padding-right: 0px;
+    border: none;
+    font-family: "Arial";
+}
+
+.custcell{
+    font-size: 16px;
+    text-align: left;
+    padding-right: 0px;
+    border: none;
+    font-family: "Arial";
+}
+
+.custemail{
+    font-size: 16px;
+    text-align: left;
+    padding-right: 0px;
+    border: none;
+    font-family: "Arial";
+}
+
+.sectionheader{
+    font-family: "Times New Roman";
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 54px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#payoutline{
+    width: 686px;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 27px;
+    border: 1px solid black;
+}
+
+
+#id_workorderdate{
+    font-size: 16px;
+    float:right;
+    margin-right: -34px;
+    margin-top: -207px;
+}
+
+.header3{
+    width: 686px;
+    margin-left: 0px;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+.header3A{
+    width: 555px;
+    margin-left: 15px;
+    display: flex;
+    border-right: 1px solid black;
+}
+
+
+
+
+#line1{
+    margin-right: 7px;
+    margin-left: 7px;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 6px;
+}
+
+#line2{
+    margin-right: 7px;
+    margin-left: 3px;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    padding-top: 6px;
+
+}
+
+#id_grandtotalcost{
+    width: 90px;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    text-align: right;
+    padding-right: 3px;
+    padding-top: 3px;
+}
+
+
+.form-row{
+    width: 797px;
+    display:flex;
+    margin-top:16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+
+
+
+div.containerA{
+    width: 50vw;
+    height: 70vh;
+
+}
+
+label{
+    width: 0px;
+    padding-right:0.25%;
+    color:black;
+    font-weight: bold;
+    text-align:right;
+    font-size: 14px;
+    font-family: "Times New Roman";
+}
+
+
+hr{
+    width: 100%;
+    border: black 2px solid;
+    margin-bottom: 0%;
+    box-sizing: border-box;
+}
+
+
+
+#worktype{
+    width: 300px;
+    display: flex;
+}
+
+div#workorderdate{
+    width:181px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    display: flex;
+    border-bottom: black 2px solid;
+}
+
+
+input#id_workorderdate{
+    width: 300px;
+    text-align:right;
+    margin-left:0px;
+    font-size: 18px;
+    padding-left: 3px;
+
+}
+
+h1#formh3{
+    height:1.5em;
+    width: 100%;
+    text-align:center;
+    font-size: 2vw;
+    margin-top:.5%;
+    margin-bottom:0px;
+    color:#c0c0c0;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+}
+
+div#header1{
+    width:100%;
+    display:flex;
+    height:5vh;
+
+}
+
+
+.containerl{
+    width: 97%;
+    height: 38.2%;
+    margin-top:-1%;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+
+
+.header1{
+    width:100%;
+    margin-top:20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.header2{
+    width:100%;
+    display: flex;
+    margin-top:0vh;
+    margin-bottom: 0vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#grandtotalcostA{
+    width: 16%;
+    margin-left: 100px;
+    margin-top: 0vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#depositA, #payment2A, #payment3A, #payment4A{
+    width: 686px;
+    font-weight: bold;
+    margin-top: 0%;
+    display: flex;
+    margin-left: 0px;
+    border-bottom: 1px solid black;
+}
+#paymentfinalA{
+    width: 686px;
+    font-weight: bold;
+    margin-top: 0%;
+    display: flex;
+    margin-left: 0px;
+}
+
+
+#depositlabel, #payment2label, #payment3label,#finallabel{
+    width:114px;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 22px;
+}
+
+#deposit, #payment2, #payment3, #payment4, #finalpayment{
+    width:90px;
+    margin-right: 16px;
+    text-align: right;
+}
+
+#deposit_id, #payment2_id, #payment3_id{
+    width: 111px;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    text-align: right;
+    border: none;
+    box-sizing: border-box;
+    padding-right: 18px;
+}
+
+#id_finalpayment{
+    width: 111px;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    text-align: right;
+    border: none;
+    box-sizing: border-box;
+    padding-right: 18px;
+}
+
+
+#custom_0, #value_2, #value_3, #value_4{
+    width:  27%;
+    margin-left: 14%;
+    margin-right: 16%;
+}
+
+#id_depositperc{
+    width: 100%;
+    text-align: center;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+
+}
+
+#id_depositperc, #id_pay2perc, #id_pay3perc, #id_pay4perc{
+    width: 100%;
+    text-align: center;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+
+}
+
+#id_customdeposit, #id_seconddeposit, #id_thirddeposit, #id_forthdeposit{
+    width: 100%;
+    text-align: right;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+    -webkit-appearance: textfield;
+
+}
+
+#depositvalue, #value2, #value3, #value4{
+    display: flex;
+
+}
+
+option{
+    font-size: large;
+}
+
+
+
+
+
+
+#payment2perc, #payment3perc, #payment4perc{
+    width:8%;
+    text-align: right;
+    margin-right:1%;
+
+}
+
+#depositperc, #perc2, #perc3, #perc4{
+    width:28%;
+    text-align: left;
+    margin-left: 5px;
+
+}
+
+
+
+
+#depositterms, #terms2, #terms3, #terms4, #termsfinal{
+    width:435px;
+    text-align: left;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    border: none;
+    padding-left: 5px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+
+}
+
+
+}
+
+#id_finalpaymentdate, #id_payment4date, #id_payment3date, #id_payment2date, #id_depositdate{
+    width:141px;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    border-bottom: black 1px solid;
+}
+
+
+#customdeposit{
+    width:85%;
+    height:10%;
+    background:#c0c0c0;
+    margin-top: 362vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#pay1{
+    width: 100%;
+    display: inline-block;
+    word-wrap: break-word;
+    display: flex;
+}
+
+
+
+h3{
+    width: 13px;
+    margin-left: 10px;
+    margin-top: -2px;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+h5{
+    width: 13px;
+    margin-left: 10px;
+    margin-top: 0px;
+    padding-bottom: 4px;
+
+}
+
+
+
+.contractor1A{
+    width: 94%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+
+#contractor2B{
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 12px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.page1{
+    width: 100%;
+    font-family: "Times New Roman";
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 0px;
+    text-align: center;
+    padding-top: 8px;
+    float:right;
+    border-top: black 1px solid;
+}
+
+.page3{
+    width: 100%;
+    font-family: "Times New Roman";
+    font-size: 12px;
+    margin-top: 223px;
+    margin-right: 0px;
+    text-align: center;
+    padding-top: 8px;
+    float:right;
+    border-top: black 1px solid;
+}
+
+
+#payterms1{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+#payterms2{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 65px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+#payterms3{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.paytermA{
+    margin-left: 12px;
+
+}
+
+#payterms3A{
+    width: 96%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 24px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+#zelle{
+    font-family: "Times New Roman";
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 126px;
+    margin-top: -24px;
+    margin-bottom: 0px;
+}
+
+#payterm3A{
+    width: 39%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 224px;
+    margin-top: -17px;
+    margin-bottom: 0px;
+}
+
+#absemail{
+    font-family: "Times New Roman";
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 477px;
+    margin-top: -19px;
+    margin-bottom: 0px;
+}
+
+#payterm3B{
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#owner1{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+#owner2{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.contractor1{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+#contractor2{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+#contractor3{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 16px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+
+#owner1A{
+    width: 94%;
+    margin-left: 11px;
+    font-family: "Times New Roman";
+    font-size: 16px;
+}
+
+#owner2A{
+    width: 94%;
+    margin-left: 12px;
+    font-family: "Times New Roman";
+    font-size: 16px;
+}
+
+#headercustom{
+    padding-top:3%;
+    text-align: center;
+    font-weight: bold;
+}
+.signiture{
+    width: 80%;
+    margin-left: 63px;
+    margin-top: 36px;
+    display: flex;
+}
+.owner, .contractor{
+    width: 50%;
+
+}
+
+.owner1{
+    font-size: 16px;
+    text-align: left;
+    padding-right: 5px;
+    border: none;
+    font-family: "Arial";
+    font-weight: bold;
+}
+
+.name{
+    width: 100px;
+    display: flex;
+}
+
+
+
+.rm-modal{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:0;
+    display:flex;
+    align-items: center;
+
+}
+
+.modal-content{
+    width:50%;
+    height:20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 29%;
+    background-color: #90ee90;
+    border-radius:10px;
+
+}
+
+.modal-content5{
+    width:80%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 45%;
+    background-color: #90ee90;
+    border-radius:10px;
+
+}
+
+#id_agreementlist, #id_worktypelistdescr, #id_worktypedescr, #id_excludedescr, #id_includedescr{
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 0%;
+    text-align: center;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+    -webkit-appearance: textfield;
+
+
+}
+
+.modaltitle{
+    height:21%;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    padding-top:10%;
+}
+
+.button4{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #006400;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.6vw + .7vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left:14%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+.button4{
+    color: white;
+}
+
+.button4:hover{
+    color: black;
+    background: #00b100;
+    text-decoration: underline;
+}
+
+.button5{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #9a0026;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.6vw + .7vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left:12%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+.button5{
+    color: white;
+}
+
+.button5:hover{
+    color: black;
+    background: red;
+    text-decoration: underline;
+}
+
+.rm-modal2, .rm-modal3, .rm-modal4, .rm-modal5, .rm-modal6, .rm-modal7, .rm-modal8, .rm-modal9{
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-content2{
+    width:60%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 35%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content3{
+    width:60%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 26%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content4{
+    width:60%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 18%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content5, .modal-content6, .modal-content7{
+    width:80%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 18%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content8, .modal-content9{
+    width:80%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 87%;
+    margin-bottom: 0%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+#modaltitle2, #modaltitle3, #modaltitle4{
+    height:15%;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    padding-top:5%;
+}
+
+#modaltitle5, #modaltitle6, #modaltitle7, #modaltitle8, #modaltitle9{
+    height:15%;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-size: calc(1vw + 1vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    padding-top:5%;
+}
+
+.button42, .button43, .button44, .button45, .button46, .button47, .button48, .button49{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #006400;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.6vw + .7vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left:14%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+.button42, .button43, .button44, .button45, .button46, .button47, .button48, .button49{
+    color: white;
+}
+
+.button42:hover, .button43:hover, .button45:hover, .button46:hover, .button47:hover, .button48:hover, .button49:hover{
+    color: black;
+    background: #00b100;
+    text-decoration: underline;
+}
+
+.button52, .button53, .button54, .button55, .button56, .button57, .button58, .button59{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #9a0026;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.6vw + .7vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left:12%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+.button52, .button53, .button54, .button55, .button56, .button57, .button58, .button59{
+    color: white;
+}
+
+.button52:hover, .button53:hover, .button54:hover, .button55:hover, .button56:hover, .button57:hover, .button58:hover,
+ .button59:hover{
+    color: black;
+    background: red;
+    text-decoration: underline;
+}
+
+#submitted{
+    display: flex;
+    flex-direction: row;
+    padding-top: 51px;
+}
+.sb{
+    width: 60.8%;
+    margin-left:2%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+
+}
+.date1{
+    width: 30%;
+    margin-left:3%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.ab{
+    width: 60%;
+    margin-left:3%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+.date2{
+    width: 30%;
+    margin-left: 3%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+
+#accepted{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    margin-bottom: 0px;
+}
+
+.section1{
+    width: 87%;
+    font-family: "Times New Roman";
+    font-size: 14px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+
+
+
+
+
+@media screen and (max-width:375px){
+
+}
+
+@media screen and (max-width:810px) and (min-width:376px){
+
+
+
+}
+
+@media screen and (max-width:1080px) and (min-width:811px){
+
+
+
+}
+
+
+
+}
+
+@media screen and (max-width:1366px) and (min-width:1080px){
+
+@media print{
+    body *:not('.container2'):not(.container2 *){
+        visibility: hidden;
+    }
+
+@page{
+    size: 7in 9.25in;
+    margin: 27mm 16mm 27mm 16mm;
+}
+
+#address {
+  color: gold;
+}
+
+.memocontainer {
+  height: 686px;
+}
+
+.outerdiv {
+  height: 1166px;
+
+}
+
+.footercontainer {
+  height: 104px;
+}
+
+
+
+
+
+
+}

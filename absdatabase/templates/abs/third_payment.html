@@ -1,0 +1,23 @@
+<input id="payment3_id" value="{{ payment3a.payment3 }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('payment3_id').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('payment3_id').value = x;
+    });
+
+$(function(){
+    $('input#payment3_id').focus(function(){
+setTimeout(function(){
+    $(".rm-modal3").show()
+        }, 200);
+    });
+});
+
+
+
+</script>

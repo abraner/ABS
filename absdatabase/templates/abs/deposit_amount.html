@@ -1,0 +1,23 @@
+<input id="deposit_id" value="{{ deposita.deposit }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('deposit_id').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('deposit_id').value = x;
+    });
+
+$(function(){
+    $('input#deposit_id').focus(function(){
+setTimeout(function(){
+    $(".rm-modal").show()
+        }, 200);
+    });
+});
+
+
+
+</script>

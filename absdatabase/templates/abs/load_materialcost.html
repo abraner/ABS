@@ -1,0 +1,70 @@
+<div class="materialcost">
+    <label id="label_materialcost">Material Cost</label>
+    <input id="id_materiallist" value="{{ materialcostA.materialcost }}">
+</div>
+<div class="laborcost">
+    <label id="label_laborcost">Labor Cost</label>
+    <input id="id_laborcost" value="{{ laborcost.laborcost }}">
+</div>
+<div class="totalcost">
+    <label id="label_totalcost">Total Cost</label>
+    <input id="id_totalcost" value="{{ totalcost.totalcost }}">
+</div>
+<div class="increase">
+    <label id="label_increase">Increase</label>
+    <input id="id_increase" value="{{ increase.increase }}">
+</div>
+<div class="grandtotalcost">
+    <label id="label_grandtotalcost">Grand Total</label>
+    <input id="id_grandtotalcost" value="{{ grandtotalcost.grandtotalcost }}">
+</div>
+
+<script>
+$(document).ready(function() {
+
+    var x = document.getElementById('id_materiallist').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('id_materiallist').value = x;
+
+
+
+
+    var x = document.getElementById('id_laborcost').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('id_laborcost').value = x;
+
+    var x = document.getElementById('id_totalcost').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('id_totalcost').value = x;
+
+     var x = document.getElementById('id_increase').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('id_increase').value = x;
+
+     var x = document.getElementById('id_grandtotalcost').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('id_grandtotalcost').value = x;
+    });
+
+</script>
+
+
+
+
+
+

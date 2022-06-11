@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/login/cust_existing3.css">
+    {% block head %}
+    <title>ABC | Customer Search</title>
+    {% endblock %}
+
+</head>
+<body  style="background-image: url('../../img/black.jpg')">
+<div id="workarea1">
+    <div class="container">
+        <div class="container1">
+        </div>
+        <div class="container2">
+        <h1 id="formh1">Customer Search</h1>
+        <a id="back"  href="1/main">Back</a>
+        <form id="form3" method="post">
+        <div id="menu2">
+            <div id="header1">
+                <div id="A">ID</div>
+                <div id="C">First Name</div>
+                <div id="D">Last Name</div>
+                <div id="E">Address</div>
+                <div id="G">City</div>
+                <div id="H">St</div>
+                <div id="I">Zip</div>
+            </div>
+            <section id="sec1"></section>
+            <section id="sec2"></section>
+            <section id="sec3"></section>
+            <section id="sec4"></section>
+            <section id="sec5"></section>
+            <section id="sec6"></section>
+            <section id="sec7"></section>
+            <section id="sec8"></section>
+            <section id="sec9"></section>
+            <section id="sec10"></section>
+            <section id="sec11"></section>
+            <section id="sec12"></section>
+            <section id="sec13"></section>
+            <form id="form1" method="post">
+                <div class="form-rowconinfo">
+                    {% for obj in object_list %}
+                    <a id="id" href="{{ obj.get_absolute5_url }}">{{ obj.id }}</a>
+                    <div id="firstname">{{ obj.custfirstname }}</div>
+                    <div id="lastname">{{ obj.custlastname }}</div>
+                    <div id="add1">{{ obj.custadd1 }}</div>
+                    <div id="city">{{ obj.custcity }}</div>
+                    <div id="st">{{ obj.custst }}</div>
+                    <div id="zipcode">{{ obj.custzipcode }}</div>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+            <div id="pag" class="pagination">
+                <span class="step-links">
+                    {% if object_list.has_previous %}
+                    <a href="?page=1">first</a>
+                    <a href="?page={{ object_list.previous_page_number }}">previous</a>
+                    {% endif %}
+                    <span class="object_list">
+                        Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+                    </span>
+                    {% if object_list.has_next %}
+                    <a href="?page={{ object_list.next_page_number }}">next</a>
+                    <a href="?page={{ object_list.paginator.num_pages }}">last</a>
+                    {% endif %}
+                </span>
+            </div>
+
+        <form id="searchbar" class="form-inline my-2 my-lg-0">
+            <input name="search"
+                   id="search"
+                   class="form-control mr-sm-2"
+                   type="search"
+                   placeholder="Search Existing Customers"
+                   aria-label="Search"
+                   >
+            <button id="searchbutton" class="btn-success" type="submit">Search</button>
+        </form>
+        </form>
+
+     </div>
+<div class="container3">
+        </div>
+    </div>
+</div>
+</body>

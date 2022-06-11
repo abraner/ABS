@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/edit_cust_info.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body style="background-image: url('../../../../img/black.jpg')">
+<section id="workarea1">
+    <div class="container">
+        <div class="container1">
+        </div>
+        <div class="container2">
+            <h1 id="formh2">Edit Custractor Information</h1>
+
+                <form class="form2" method="post">
+                    {% csrf_token %}
+                    {{ form.name_of_field }}
+                    <div class="form-rowcom">
+                        {{ form.custcompanytname.errors }}
+                        <label id="label_custcompanytname">Company:</label>
+                        {{ form.custcompanytname }}
+                    </div>
+                    <div class="form-row">
+                        {{ form.custfirstname.errors }}
+                        <label id="label_custfirstname">First Name:</label>
+                        {{ form.custfirstname }}
+                    </div>
+            <div class="form-row">
+                {{ form.custlastname.errors }}
+                <label id="label_custlastname">Last Name:</label>
+                {{ form.custlastname }}
+            </div>
+            <div class="form-row">
+                {{ form.custadd1.errors }}
+                <label id="label_custadd1">Address #1:</label>
+                {{ form.custadd1 }}
+            </div>
+            <div class="form-row">
+                {{ form.custadd2.errors }}
+                <label id="label_custadd2">Address #2:</label>
+                {{ form.custadd2 }}
+            </div>
+            <div class="form-row">
+                {{ form.custcity.errors }}
+                <label id="label_custcity">City:</label>
+                {{ form.custcity }}
+            </div>
+            <div class="form-rowst">
+                {{ form.custst.errors }}
+                <label class="label_custst">State:</label>
+                {{ form.custst }}
+            </div>
+            <div class="form-row">
+                {{ form.custzipcode.errors }}
+                <label class="label_custzipcode">Zip Code:</label>
+                {{ form.custzipcode }}
+            </div>
+            <div class="form-rowphone">
+                {{ form.custwork1.errors }}
+                <label class="label_custwork1">Work Phone 1:</label>
+                {{ form.custwork1 }}
+            </div>
+            <div class="form-rowphone">
+                {{ form.custwork2.errors }}
+                <label class="label_custwork2">Work Phone 2:</label>
+                {{ form.custwork2 }}
+            </div>
+            <div class="form-rowphone">
+                {{ form.custcell1.errors }}
+                <label class="label_custcell1">Cell Phone 1:</label>
+                {{ form.custcell1 }}
+            </div>
+            <div class="form-rowphone">
+                 {{ form.custcell2.errors }}
+                 <label class="label_custcell2">Cell Phone 2:</label>
+                {{ form.custcell2 }}
+            </div>
+            <div class="form-rowphone">
+                {{ form.custhome.errors }}
+                <label class="label_custhome">Home Phone:</label>
+                {{ form.custhome }}
+            </div>
+            <div class="form-rowemail">
+                {{ form.custemail1.errors }}
+                <label class="label_custemail1">Email #1:</label>
+                {{ form.custemail1 }}
+            </div>
+            <div class="form-rowemail">
+                {{ form.custemail2.errors }}
+                <label class="label_custemail2">Email #2:</label>
+                {{ form.custemail2 }}
+            </div>
+                     <button id="btn1" type="submit" class="btn-success">ENTER</button>
+            </form>
+
+
+        </div>
+        <div class="container3">
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<script type="text/javascript">
+</script>

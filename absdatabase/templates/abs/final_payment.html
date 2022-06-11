@@ -1,0 +1,16 @@
+<input id="id_finalpayment" value="{{ finalpayment.finalpayment }}">
+
+<script>
+$(document).ready(function() {
+var x = document.getElementById("id_finalpayment").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_finalpayment").value = x;
+    });
+
+
+</script>

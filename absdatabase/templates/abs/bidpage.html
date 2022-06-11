@@ -1,0 +1,4680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/bidpage.css">
+    <title>ABS Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/black.jpg')">
+<section id="workarea1">
+    <div class="container">
+        <div class="container1">
+        </div>
+        <div class="container2">
+            <form class="form2" method="post"
+                  beamtype-url="{% url 'absdatabase:beamtype' instance.id %}"
+                  beamtypeb-url="{% url 'absdatabase:ajax_load_beamtype' instance.id %}"
+                  beamsizea-url="{% url 'absdatabase:ajax_load_beamsize' instance.id %}"
+                  beamsize-url="{% url 'absdatabase:beamsize' instance.id %}"
+                  beaminfo-url="{% url 'absdatabase:ajax_load_beaminfo' instance.id %}"
+                  beamselecta-url="{% url 'absdatabase:ajax_load_beamselect' instance.id %}"
+                  beamreset-url="{% url 'absdatabase:beamreset' instance.id %}"
+                  load_disable-url="{% url 'absdatabase:ajax_load_disable' instance.id %}"
+                  worktype-url="{% url 'absdatabase:worktype' instance.id %}"
+                  chfeet-url="{% url 'absdatabase:chfeet' instance.id %}"
+                  chinches-url="{% url 'absdatabase:chinches' instance.id %}"
+                  qty1-url="{% url 'absdatabase:qty1' instance.id %}"
+                  qty1A-url="{% url 'absdatabase:qty1A' instance.id %}"
+                  load_qty1-url="{% url 'absdatabase:load_qty1' instance.id %}"
+                  load_ft1_0-url="{% url 'absdatabase:ajax_load_ft1_0' instance.id %}"
+                  load_in1_0-url="{% url 'absdatabase:ajax_load_in1_0' instance.id %}"
+                  ft1-url="{% url 'absdatabase:ft1' instance.id %}"
+                  inch1-url="{% url 'absdatabase:inch1' instance.id %}"
+                  lcqty1-url="{% url 'absdatabase:lcqty1' instance.id %}"
+                  lclenght1-url="{% url 'absdatabase:lclenght1' instance.id %}"
+                  load_lclenght1_0-url="{% url 'absdatabase:ajax_load_lclenght1_0' instance.id %}"
+                  lctransition1-url="{% url 'absdatabase:lctransition1' instance.id %}"
+                  load_lctransition1_0-url="{% url 'absdatabase:ajax_load_lctransition1_0' instance.id %}"
+                  qty2-url="{% url 'absdatabase:qty2' instance.id %}"
+                  qty2A-url="{% url 'absdatabase:qty2A' instance.id %}"
+                  load_ft2_0-url="{% url 'absdatabase:ajax_load_ft2_0' instance.id %}"
+                  load_in2_0-url="{% url 'absdatabase:ajax_load_in2_0' instance.id %}"
+                  ft2-url="{% url 'absdatabase:ft2' instance.id %}"
+                  inch2-url="{% url 'absdatabase:inch2' instance.id %}"
+                  lcqty2-url="{% url 'absdatabase:lcqty2' instance.id %}"
+                  lclenght2-url="{% url 'absdatabase:lclenght2' instance.id %}"
+                  lctransition2-url="{% url 'absdatabase:lctransition2' instance.id %}"
+                  load_lclenght2_0-url="{% url 'absdatabase:ajax_load_lclenght2_0' instance.id %}"
+                  load_lctransition2_0-url="{% url 'absdatabase:ajax_load_lctransition2_0' instance.id %}"
+                  qty3-url="{% url 'absdatabase:qty3' instance.id %}"
+                  qty3A-url="{% url 'absdatabase:qty3A' instance.id %}"
+                  load_ft3_0-url="{% url 'absdatabase:ajax_load_ft3_0' instance.id %}"
+                  load_in3_0-url="{% url 'absdatabase:ajax_load_in3_0' instance.id %}"
+                  ft3-url="{% url 'absdatabase:ft3' instance.id %}"
+                  inch3-url="{% url 'absdatabase:inch3' instance.id %}"
+                  lcqty3-url="{% url 'absdatabase:lcqty3' instance.id %}"
+                  lcqty3A-url="{% url 'absdatabase:lcqty3A' instance.id %}"
+                  load_lclenght3_0-url="{% url 'absdatabase:ajax_load_lclenght3_0' instance.id %}"
+                  load_lctransition3_0-url="{% url 'absdatabase:ajax_load_lctransition3_0' instance.id %}"
+                  lclenght3-url="{% url 'absdatabase:lclenght3' instance.id %}"
+                  lctransition3-url="{% url 'absdatabase:lctransition3' instance.id %}"
+                  qty4-url="{% url 'absdatabase:qty4' instance.id %}"
+                  qty4A-url="{% url 'absdatabase:qty4A' instance.id %}"
+                  load_ft4_0-url="{% url 'absdatabase:ajax_load_ft4_0' instance.id %}"
+                  load_in4_0-url="{% url 'absdatabase:ajax_load_in4_0' instance.id %}"
+                  ft4-url="{% url 'absdatabase:ft4' instance.id %}"
+                  inch4-url="{% url 'absdatabase:inch4' instance.id %}"
+                  lcqty4-url="{% url 'absdatabase:lcqty4' instance.id %}"
+                  lclenght4-url="{% url 'absdatabase:lclenght4' instance.id %}"
+                  lctransition4-url="{% url 'absdatabase:lctransition4' instance.id %}"
+                  load_lclenght4_0-url="{% url 'absdatabase:ajax_load_lclenght4_0' instance.id %}"
+                  load_lctransition4_0-url="{% url 'absdatabase:ajax_load_lctransition4_0' instance.id %}"
+                  qty5-url="{% url 'absdatabase:qty5' instance.id %}"
+                  qty5A-url="{% url 'absdatabase:qty5A' instance.id %}"
+                  load_ft5_0-url="{% url 'absdatabase:ajax_load_ft5_0' instance.id %}"
+                  load_in5_0-url="{% url 'absdatabase:ajax_load_in5_0' instance.id %}"
+                  ft5-url="{% url 'absdatabase:ft5' instance.id %}"
+                  inch5-url="{% url 'absdatabase:inch5' instance.id %}"
+                  lcqty5-url="{% url 'absdatabase:lcqty5' instance.id %}"
+                  lclenght5-url="{% url 'absdatabase:lclenght5' instance.id %}"
+                  lctransition5-url="{% url 'absdatabase:lctransition5' instance.id %}"
+                  load_lclenght5_0-url="{% url 'absdatabase:ajax_load_lclenght5_0' instance.id %}"
+                  load_lctransition5_0-url="{% url 'absdatabase:ajax_load_lctransition5_0' instance.id %}"
+                  qty6-url="{% url 'absdatabase:qty6' instance.id %}"
+                  qty6A-url="{% url 'absdatabase:qty6A' instance.id %}"
+                  ft6-url="{% url 'absdatabase:ft6' instance.id %}"
+                  inch6-url="{% url 'absdatabase:inch6' instance.id %}"
+                  lcqty6-url="{% url 'absdatabase:lcqty6' instance.id %}"
+                  load_ft6_0-url="{% url 'absdatabase:ajax_load_ft6_0' instance.id %}"
+                  load_in6_0-url="{% url 'absdatabase:ajax_load_in6_0' instance.id %}"
+                  lclenght6-url="{% url 'absdatabase:lclenght6' instance.id %}"
+                  lctransition6-url="{% url 'absdatabase:lctransition6' instance.id %}"
+                  load_lclenght6_0-url="{% url 'absdatabase:ajax_load_lclenght6_0' instance.id %}"
+                  load_lctransition6_0-url="{% url 'absdatabase:ajax_load_lctransition6_0' instance.id %}"
+                  jobcost-url="{% url 'absdatabase:jobcost' instance.id %}"
+                  increase-url="{% url 'absdatabase:increase' instance.id %}"
+                  totals-url="{% url 'absdatabase:totals' instance.id %}"
+                  totals2-url="{% url 'absdatabase:totals2' instance.id %}"
+                  totals3-url="{% url 'absdatabase:totals3' instance.id %}"
+                  totals4-url="{% url 'absdatabase:totals4' instance.id %}"
+                  totals5-url="{% url 'absdatabase:totals5' instance.id %}"
+                  totals6-url="{% url 'absdatabase:totals6' instance.id %}"
+                  load_materialcost-url="{% url 'absdatabase:load_materialcost' instance.id %}"
+                  footingqty-url="{% url 'absdatabase:footingqty' instance.id %}"
+                  footingsize-url="{% url 'absdatabase:footingsize' instance.id %}"
+                  load_footingsize_0-url="{% url 'absdatabase:load_footingsize_0' instance.id %}"
+                  totalsfootingsize-url="{% url 'absdatabase:totalsfootingsize' instance.id %}"
+                  misc1qty-url="{% url 'absdatabase:misc1qty' instance.id %}"
+                  misc1descrip-url="{% url 'absdatabase:misc1descrip' instance.id %}"
+                  misc1mat-url="{% url 'absdatabase:misc1mat' instance.id %}"
+                  misc1labor-url="{% url 'absdatabase:misc1labor' instance.id %}"
+                  misctotal-url="{% url 'absdatabase:misctotal' instance.id %}"
+                  load_misc1descrip_0-url="{% url 'absdatabase:load_misc1descrip_0' instance.id %}"
+                  load_misc1mat_0-url="{% url 'absdatabase:load_misc1mat_0' instance.id %}"
+                  load_misc1labor_0-url="{% url 'absdatabase:load_misc1labor_0' instance.id %}"
+                  misc2qty-url="{% url 'absdatabase:misc2qty' instance.id %}"
+                  misc2descrip-url="{% url 'absdatabase:misc2descrip' instance.id %}"
+                  misc2mat-url="{% url 'absdatabase:misc2mat' instance.id %}"
+                  misc2labor-url="{% url 'absdatabase:misc2labor' instance.id %}"
+                  load_misc2descrip_0-url="{% url 'absdatabase:load_misc2descrip_0' instance.id %}"
+                  load_misc2mat_0-url="{% url 'absdatabase:load_misc2mat_0' instance.id %}"
+                  load_misc2labor_0-url="{% url 'absdatabase:load_misc2labor_0' instance.id %}"
+                  misc3qty-url="{% url 'absdatabase:misc3qty' instance.id %}"
+                  misc3descrip-url="{% url 'absdatabase:misc3descrip' instance.id %}"
+                  misc3mat-url="{% url 'absdatabase:misc3mat' instance.id %}"
+                  misc3labor-url="{% url 'absdatabase:misc3labor' instance.id %}"
+                  load_misc3descrip_0-url="{% url 'absdatabase:load_misc3descrip_0' instance.id %}"
+                  load_misc3mat_0-url="{% url 'absdatabase:load_misc3mat_0' instance.id %}"
+                  load_misc3labor_0-url="{% url 'absdatabase:load_misc3labor_0' instance.id %}"
+                  misc4qty-url="{% url 'absdatabase:misc4qty' instance.id %}"
+                  misc4descrip-url="{% url 'absdatabase:misc4descrip' instance.id %}"
+                  misc4mat-url="{% url 'absdatabase:misc4mat' instance.id %}"
+                  misc4labor-url="{% url 'absdatabase:misc4labor' instance.id %}"
+                  load_misc4descrip_0-url="{% url 'absdatabase:load_misc4descrip_0' instance.id %}"
+                  load_misc4mat_0-url="{% url 'absdatabase:load_misc4mat_0' instance.id %}"
+                  load_misc4labor_0-url="{% url 'absdatabase:load_misc4labor_0' instance.id %}"
+            >
+                {% csrf_token %}
+                {{ form.name_of_field }}
+                <div class="form-rowid">
+                    <div class="custid">
+                        {{ form.custid.errors }}
+                        <label id="label_custid">Cust ID:</label>
+                        {{ form.custid }}
+                    </div>
+                    <h1 id="formh2">Bid Page</h1>
+                </div>
+                <div class="disable">
+                         <div id="id_disable"></div>
+                     </div>
+                <div id="ceilingbox">
+                    <label id="chlabel">Ceiling Height</label>
+                    <div class="chfeet1">
+                        {{ form.chfeet1.errors }}
+                        <label id="label_chfeet1">Ft.:</label>
+                        {{ form.chfeet1 }}
+                    </div>
+                    <div class="chinches1">
+                        {{ form.chinches1.errors }}
+                        <label id="label_chinches1">Inches:</label>
+                        {{ form.chinches1 }}
+                    </div>
+                </div>
+                <div class="beamcontainer">
+                    <div class="beamselect">
+                         <div id="id_beamselect"></div>
+                     </div>
+                </div>
+                <div class="worktype">
+                        {{ form.worktype.errors }}
+                        <label id="label_worktype">Work Type</label>
+                        {{ form.worktype }}
+                </div>
+                <div class="prodqueue">
+                        {{ form.prodqueue.errors }}
+                        <label id="label_prodqueue">Increase</label>
+                        {{ form.prodqueue }}
+                </div>
+
+                <div class="box1">
+                <div class="beaminfo">
+                    <div class="header2">
+                        <div class="beam">Beam Info.</div>
+                        <div class="lally">Lally Column</div>
+                    </div>
+                    <div id="row1">
+                        <div class="qty1">
+                            {{ form.qty1.errors }}
+                            <label id="label_qty1">Qty</label>
+                            {{ form.qty1 }}
+                        </div>
+
+                        <div class="beamlength1ft">
+                            <label id="label_beamlength1ft">Feet</label>
+                            <select id="id_beamlength1ft"></select>
+                        </div>
+                        <div class="beamlength1in">
+                            <label id="label_beamlength1in">Inches</label>
+                            <select id="id_beamlength1in"></select>
+                        </div>
+                        <div class="lcqty1">
+                            {{ form.lcqty1.errors }}
+                            <label id="label_lcqty1">Qty</label>
+                            {{ form.lcqty1 }}
+                        </div>
+                        <div class="lclength1">
+                            {{ form.lclength1.errors }}
+                            <label id="label_lclength1">Length</label>
+                            {{ form.lclength1 }}
+                        </div>
+                        <div class="lctransition1">
+                            {{ form.lctransition1.errors }}
+                            <label id="label_lctransition1">Flange</label>
+                            {{ form.lctransition1 }}
+                        </div>
+                    </div>
+                    <div id="row2">
+                         <div class="qty2">
+                            {{ form.qty2.errors }}
+                            {{ form.qty2 }}
+                        </div>
+                        <div class="beamlength2ft">
+                            <select id="id_beamlength2ft"></select>
+                        </div>
+                        <div class="beamlength2in">
+                            <select id="id_beamlength2in"></select>
+                        </div>
+                        <div class="lcqty2">
+                            {{ form.lcqty2.errors }}
+                            {{ form.lcqty2 }}
+                        </div>
+                        <div class="lclength2">
+                            {{ form.lclength2.errors }}
+                            {{ form.lclength2 }}
+                        </div>
+                        <div class="lctransition2">
+                            {{ form.lctransition2.errors }}
+                            {{ form.lctransition2 }}
+                        </div>
+                    </div>
+                    <div id="row3">
+                         <div class="qty3">
+                            {{ form.qty3.errors }}
+                            {{ form.qty3 }}
+                        </div>
+                        <div class="beamlength3ft">
+                            <select id="id_beamlength3ft"></select>
+                        </div>
+                        <div class="beamlength3in">
+                            <select id="id_beamlength3in"></select>
+                        </div>
+                        <div class="lcqty3">
+                            {{ form.lcqty3.errors }}
+                            {{ form.lcqty3 }}
+                        </div>
+                        <div class="lclength3">
+                            {{ form.lclength3.errors }}
+                            {{ form.lclength3 }}
+                        </div>
+                        <div class="lctransition3">
+                            {{ form.lctransition3.errors }}
+                            {{ form.lctransition3 }}
+                        </div>
+                    </div>
+                    <div id="row4">
+                         <div class="qty4">
+                            {{ form.qty4.errors }}
+                            {{ form.qty4 }}
+                        </div>
+                        <div class="beamlength4ft">
+                            <select id="id_beamlength4ft"></select>
+                        </div>
+                        <div class="beamlength4in">
+                            <select id="id_beamlength4in"></select>
+                        </div>
+                        <div class="lcqty4">
+                            {{ form.lcqty4.errors }}
+                            {{ form.lcqty4 }}
+                        </div>
+                        <div class="lclength4">
+                            {{ form.lclength4.errors }}
+                            {{ form.lclength4 }}
+                        </div>
+                        <div class="lctransition4">
+                            {{ form.lctransition4.errors }}
+                            {{ form.lctransition4 }}
+                        </div>
+                    </div>
+                    <div id="row5">
+                         <div class="qty5">
+                            {{ form.qty5.errors }}
+                            {{ form.qty5 }}
+                        </div>
+                        <div class="beamlength5ft">
+                            <select id="id_beamlength5ft"></select>
+                        </div>
+                        <div class="beamlength5in">
+                            <select id="id_beamlength5in"></select>
+                        </div>
+                        <div class="lcqty5">
+                            {{ form.lcqty5.errors }}
+                            {{ form.lcqty5 }}
+                        </div>
+                        <div class="lclength5">
+                            {{ form.lclength5.errors }}
+                            {{ form.lclength5 }}
+                        </div>
+                        <div class="lctransition5">
+                            {{ form.lctransition5.errors }}
+                            {{ form.lctransition5 }}
+                        </div>
+                    </div>
+                    <div id="row6">
+                         <div class="qty6">
+                            {{ form.qty6.errors }}
+                            {{ form.qty6 }}
+                        </div>
+                        <div class="beamlength6ft">
+                            <select id="id_beamlength6ft"></select>
+                        </div>
+                        <div class="beamlength6in">
+                            <select id="id_beamlength6in"></select>
+                        </div>
+                        <div class="lcqty6">
+                            {{ form.lcqty6.errors }}
+                            {{ form.lcqty6 }}
+                        </div>
+                        <div class="lclength6">
+                            {{ form.lclength6.errors }}
+                            {{ form.lclength6 }}
+                        </div>
+                        <div class="lctransition6">
+                            {{ form.lctransition6.errors }}
+                            {{ form.lctransition6 }}
+                        </div>
+                    </div>
+                    <div class="header3">
+                        <div class="footing">Footing Info.</div>
+                    </div>
+                    <div id="rowfooting">
+                        <div class="footingqty">
+                            {{ form.footingqty.errors }}
+                            <label id="label_footingqty">Qty</label>
+                            {{ form.footingqty }}
+                        </div>
+                        <div class="footingsize">
+                            <label id="label_footingsize">Footing Size</label>
+                            <select id="id_footingsize"></select>
+                        </div>
+                    </div>
+                    <div class="header3">
+                        <div class="footing">Misc. Work</div>
+                    </div>
+                    <div id="rowmisc1">
+                        <div class="miscqty1">
+                            {{ form.miscqty1.errors }}
+                            <label id="label_miscqty1">Qty</label>
+                            {{ form.miscqty1 }}
+                        </div>
+                        <div class="miscdescription1">
+                            <label id="label_miscdescription1">Description</label>
+                            <div id="id_miscdescription1"></div>
+
+                        </div>
+                        <div class="miscmat1">
+                            <label id="label_miscmat1">Mat.</label>
+                            <div id="id_miscmat1"></div>
+                        </div>
+                        <div class="misclabor1">
+                            <label id="label_misclabor1">Labor</label>
+                            <div id="id_misclabor1"></div>
+                        </div>
+                    </div>
+                    <div id="rowmisc2">
+                        <div class="miscqty2">
+                            {{ form.miscqty2.errors }}
+                            {{ form.miscqty2 }}
+                        </div>
+                        <div class="miscdescription2">
+                            <div id="id_miscdescription2"></div>
+                        </div>
+                        <div class="miscmat2">
+                            <div id="id_miscmat2"></div>
+                        </div>
+                        <div class="misclabor2">
+                            <div id="id_misclabor2"></div>
+                        </div>
+                    </div>
+                    <div id="rowmisc3">
+                        <div class="miscqty3">
+                            {{ form.miscqty3.errors }}
+                            {{ form.miscqty3 }}
+                        </div>
+                        <div class="miscdescription3">
+                            <div id="id_miscdescription3"></div>
+                        </div>
+                        <div class="miscmat3">
+                            <div id="id_miscmat3"></div>
+                        </div>
+                        <div class="misclabor3">
+                            <div id="id_misclabor3"></div>
+                        </div>
+                    </div>
+                    <div id="rowmisc4">
+                        <div class="miscqty4">
+                            {{ form.miscqty4.errors }}
+                            {{ form.miscqty4 }}
+                        </div>
+                        <div class="miscdescription4">
+                            <div id="id_miscdescription4"></div>
+                        </div>
+                        <div class="miscmat4">
+                            <div id="id_miscmat4"></div>
+                        </div>
+                        <div class="misclabor4">
+                            <div id="id_misclabor4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jobcost">
+
+                     <div class="materialcost">
+                         <div id="id_materialcost"></div>
+                     </div>
+                    </div>
+              </div>
+
+
+            </form>
+        </div>
+        <div class="container3">
+            <div class="contract">
+                    <a class="btn btn9" id="contract" href="{{ instance.get_absolute6_url }}">Customer Information</a>
+                </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+////////////////////////////  Document Ready  ///////////////////////////////
+$(document).ready(function(){
+
+
+
+
+    if ($('#id_disabled').val() ==0)  $("#id_qty1").attr("disabled", true)
+    if ($('#id_disabled').val() ==1)  $("#id_qty1").attr("disabled", false)
+
+
+
+    if ($('#id_qty1').val() ==0)  $("#id_beamlength1ft").attr("disabled", true)
+    if ($('#id_qty1').val() ==0)  $("#id_beamlength1in").attr("disabled", true)
+    if ($('#id_qty1').val() >0)  $("#id_beamlength1ft").attr("disabled", false)
+    if ($('#id_qty1').val() >0)  $("#id_beamlength1in").attr("disabled", false)
+    if ($('#id_qty2').val() ==0)  $("#id_beamlength2ft").attr("disabled", true)
+    if ($('#id_qty2').val() ==0)  $("#id_beamlength2in").attr("disabled", true)
+    if ($('#id_qty2').val() >0)  $("#id_beamlength2ft").attr("disabled", false)
+    if ($('#id_qty2').val() >0)  $("#id_beamlength2in").attr("disabled", false)
+    if ($('#id_qty3').val() ==0)  $("#id_beamlength3ft").attr("disabled", true)
+    if ($('#id_qty3').val() ==0)  $("#id_beamlength3in").attr("disabled", true)
+    if ($('#id_qty3').val() >0)  $("#id_beamlength3ft").attr("disabled", false)
+    if ($('#id_qty3').val() >0)  $("#id_beamlength3in").attr("disabled", false)
+    if ($('#id_qty4').val() ==0)  $("#id_beamlength4ft").attr("disabled", true)
+    if ($('#id_qty4').val() ==0)  $("#id_beamlength4in").attr("disabled", true)
+    if ($('#id_qty4').val() >0)  $("#id_beamlength4ft").attr("disabled", false)
+    if ($('#id_qty4').val() >0)  $("#id_beamlength4in").attr("disabled", false)
+    if ($('#id_qty5').val() ==0)  $("#id_beamlength5ft").attr("disabled", true)
+    if ($('#id_qty5').val() ==0)  $("#id_beamlength5in").attr("disabled", true)
+    if ($('#id_qty5').val() >0)  $("#id_beamlength5ft").attr("disabled", false)
+    if ($('#id_qty5').val() >0)  $("#id_beamlength5in").attr("disabled", false)
+    if ($('#id_qty6').val() ==0)  $("#id_beamlength6ft").attr("disabled", true)
+    if ($('#id_qty6').val() ==0)  $("#id_beamlength6in").attr("disabled", true)
+    if ($('#id_qty6').val() >0)  $("#id_beamlength6ft").attr("disabled", false)
+    if ($('#id_qty6').val() >0)  $("#id_beamlength6in").attr("disabled", false)
+    if ($('#id_lcqty1').val() ==0)  $("#id_lclength1").attr("disabled", true)
+    if ($('#id_lcqty1').val() ==0)  $("#id_lctransition1").attr("disabled", true)
+    if ($('#id_lcqty1').val() >0)  $("#id_lclength1").attr("disabled", false)
+    if ($('#id_lcqty1').val() >0)  $("#id_lctransition1").attr("disabled", false)
+    if ($('#id_lcqty2').val() ==0)  $("#id_lclength2").attr("disabled", true)
+    if ($('#id_lcqty2').val() ==0)  $("#id_lctransition2").attr("disabled", true)
+    if ($('#id_lcqty2').val() >0)  $("#id_lclength2").attr("disabled", false)
+    if ($('#id_lcqty2').val() >0)  $("#id_lctransition2").attr("disabled", false)
+    if ($('#id_lcqty3').val() ==0)  $("#id_lclength3").attr("disabled", true)
+    if ($('#id_lcqty3').val() ==0)  $("#id_lctransition3").attr("disabled", true)
+    if ($('#id_lcqty3').val() >0)  $("#id_lclength3").attr("disabled", false)
+    if ($('#id_lcqty3').val() >0)  $("#id_lctransition3").attr("disabled", false)
+    if ($('#id_lcqty4').val() ==0)  $("#id_lclength4").attr("disabled", true)
+    if ($('#id_lcqty4').val() ==0)  $("#id_lctransition4").attr("disabled", true)
+    if ($('#id_lcqty4').val() >0)  $("#id_lclength4").attr("disabled", false)
+    if ($('#id_lcqty4').val() >0)  $("#id_lctransition4").attr("disabled", false)
+    if ($('#id_lcqty5').val() ==0)  $("#id_lclength5").attr("disabled", true)
+    if ($('#id_lcqty5').val() ==0)  $("#id_lctransition5").attr("disabled", true)
+    if ($('#id_lcqty5').val() >0)  $("#id_lclength5").attr("disabled", false)
+    if ($('#id_lcqty5').val() >0)  $("#id_lctransition5").attr("disabled", false)
+    if ($('#id_lcqty6').val() ==0)  $("#id_lclength6").attr("disabled", true)
+    if ($('#id_lcqty6').val() ==0)  $("#id_lctransition6").attr("disabled", true)
+    if ($('#id_lcqty6').val() >0)  $("#id_lclength6").attr("disabled", false)
+    if ($('#id_lcqty6').val() >0)  $("#id_lctransition6").attr("disabled", false)
+    if ($('#id_footingqty').val() ==0)  $("#id_footingsize").attr("disabled", true)
+    if ($('#id_footingqty').val() >0)  $("#id_footingsize").attr("disabled", false)
+    if ($('#id_miscqty1').val() ==0)  $("#miscdescription1").attr("disabled", true)
+    if ($('#id_miscqty1').val() >0)  $("#miscdescription1").attr("disabled", false)
+    if ($('#id_miscqty1').val() ==0)  $("#miscmat1").attr("disabled", true)
+    if ($('#id_miscqty1').val() >0)  $("#miscmat1").attr("disabled", false)
+    if ($('#id_miscqty1').val() ==0)  $("#misclabor1").attr("disabled", true)
+    if ($('#id_miscqty1').val() >0)  $("#misclabor1").attr("disabled", false)    
+    if ($('#id_miscqty2').val() ==0)  $("#miscdescription2").attr("disabled", true)
+    if ($('#id_miscqty2').val() >0)  $("#miscdescription2").attr("disabled", false)
+    if ($('#id_miscqty2').val() ==0)  $("#miscmat2").attr("disabled", true)
+    if ($('#id_miscqty2').val() >0)  $("#miscmat2").attr("disabled", false)
+    if ($('#id_miscqty2').val() ==0)  $("#misclabor2").attr("disabled", true)
+    if ($('#id_miscqty2').val() >0)  $("#misclabor2").attr("disabled", false)   
+    if ($('#id_miscqty3').val() ==0)  $("#miscdescription3").attr("disabled", true)
+    if ($('#id_miscqty3').val() >0)  $("#miscdescription3").attr("disabled", false)
+    if ($('#id_miscqty3').val() ==0)  $("#miscmat3").attr("disabled", true)
+    if ($('#id_miscqty3').val() >0)  $("#miscmat3").attr("disabled", false)
+    if ($('#id_miscqty3').val() ==0)  $("#misclabor3").attr("disabled", true)
+    if ($('#id_miscqty3').val() >0)  $("#misclabor3").attr("disabled", false)    
+    if ($('#id_miscqty4').val() ==0)  $("#miscdescription4").attr("disabled", true)
+    if ($('#id_miscqty4').val() >0)  $("#miscdescription4").attr("disabled", false)
+    if ($('#id_miscqty4').val() ==0)  $("#miscmat4").attr("disabled", true)
+    if ($('#id_miscqty4').val() >0)  $("#miscmat4").attr("disabled", false)
+    if ($('#id_miscqty4').val() ==0)  $("#misclabor4").attr("disabled", true)
+    if ($('#id_miscqty4').val() >0)  $("#misclabor4").attr("disabled", false)
+
+
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("beaminfo-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamselect").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_ft1_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength1ft").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_in1_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength1in").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_ft2_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength2ft").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_in2_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength2in").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_ft3_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength3ft").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_in3_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength3in").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_ft4_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength4ft").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_in4_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength4in").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_ft5_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength5ft").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_in5_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength5in").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_ft6_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength6ft").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_in6_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_beamlength6in").html(data);
+                    }
+               });
+       }, 0);
+
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_lclenght1_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_lclength1").html(data);
+                    }
+               });
+       }, 0);
+
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_footingsize_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_footingsize").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc1descrip_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_miscdescription1").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc1mat_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_miscmat1").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc1labor_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_misclabor1").html(data);
+                    }
+               });
+       }, 0);
+
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc2descrip_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_miscdescription2").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc2mat_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_miscmat2").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc2labor_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_misclabor2").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc3descrip_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_miscdescription3").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc3mat_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_miscmat3").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc3labor_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_misclabor3").html(data);
+                    }
+               });
+       }, 0);
+
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc4descrip_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_miscdescription4").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc4mat_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_miscmat4").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+           var urlC = $(".form2").attr("load_misc4labor_0-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_misclabor4").html(data);
+                    }
+               });
+       }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("load_disable-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_disable").html(data);
+                     }
+                });
+        }, 0);
+
+
+});
+
+
+
+
+////////////////////////////  Ceiling Height Feet  ///////////////////////////////
+
+$(function(){
+    $('#id_chfeet1').change(function(){
+                var selectBox =document.getElementById('id_chfeet1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("chfeet-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_chfeet1: $('#id_chfeet1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+////////////////////////////  Ceiling Height Inches  ///////////////////////////////
+
+//$(function(){
+//    $('#id_chinches1').change(function(){
+//                var selectBox =document.getElementById('id_chinches1');
+//                var userInput =selectBox.options[selectBox.selectedIndex].value;
+//                console.log(userInput);
+//                var url = $(".form2").attr("chinches-url");
+//                    $.ajax({
+//                        type:'POST',
+//                       url: url,
+//                       data:{
+//                            id_chinches1: $('#id_chinches1').val(),
+//                            csrfmiddlewaretoken: '{{ csrf_token }}'
+//                         },
+//                    });
+//    });
+//});
+$(function(){
+    $('#id_chinches1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_chinches1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("chinches-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_chinches1: $('#id_chinches1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+////////////////////////////  Worktype  ///////////////////////////////
+
+
+$(function(){
+    $('#id_worktype').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_worktype');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("worktype-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_worktype: $('#id_worktype').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+////////////////////////////  Increase  ///////////////////////////////
+
+
+$(function(){
+    $('#id_prodqueue').change(function(){
+                var selectBox =document.getElementById('id_prodqueue');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("increase-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_prodqueue: $('#id_prodqueue').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_prodqueue').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_prodqueue');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_prodqueue: $('#id_prodqueue').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+////////////////////////////  Row 1  ///////////////////////////////
+
+$(function(){
+    $('#id_qty1').change(function(){
+                var selectBox =document.getElementById('id_qty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_qty1').val() >0) var url = $(".form2").attr("qty1-url");
+                if ($('#id_qty1').val() ==0) var url = $(".form2").attr("qty1A-url");
+                if ($('#id_qty1').val() ==0)  $("#id_beamlength1ft").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty1').val() ==0)  $("#id_beamlength1in").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty1').val() >0)  $("#id_beamlength1ft").attr("disabled", false).css('background-color', '#66d09a');
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty1: $('#id_qty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+
+$(function(){
+    $('#id_qty1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty1: $('#id_qty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_qty1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty1: $('#id_qty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 300);
+    });
+});
+
+$(function(){
+$('#id_qty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+$('#id_qty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_ft1_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength1ft").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+
+$(function(){
+$('#id_qty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_in1_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength1in").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength1ft').change(function(){
+                var selectBox =document.getElementById('id_beamlength1ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength1ft').val() >0)  $("#id_beamlength1ft").css('background-color', 'white');
+                if ($('#id_beamlength1ft').val() >0)  $("#id_beamlength1in").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("ft1-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength1ft: $('#id_beamlength1ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_beamlength1ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength1ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength1ft: $('#id_beamlength1ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength1ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength1ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                document.getElementById("id_beamlength1in").focus();
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength1ft: $('#id_beamlength1ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength1ft').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_beamlength1in').change(function(){
+                var selectBox =document.getElementById('id_beamlength1in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength1in').val() >0)  $("#id_beamlength1in").css('background-color', 'white');
+                var url = $(".form2").attr("inch1-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength1in: $('#id_beamlength1in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength1in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength1in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength1in: $('#id_beamlength1in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength1in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength1in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength1in: $('#id_beamlength1in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength1in').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_beamlength1in').blur(function(){
+    setTimeout(function(){
+            $("#id_beamlength1in").css('background-color', 'white');
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_lcqty1').change(function(){
+                var selectBox =document.getElementById('id_lcqty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("lcqty1-url");
+                if ($('#id_lcqty1').val() ==0)  $("#id_lclength1").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty1').val() ==0)  $("#id_lctransition1").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty1').val() >0)  $("#id_lclength1").attr("disabled", false).css('background-color', '#66d09a');
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty1: $('#id_lcqty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lcqty1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty1: $('#id_lcqty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lcqty1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty1: $('#id_lcqty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lcqty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_lcqty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lclenght1_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lclength1").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_lcqty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition1_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition1").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lclength1').change(function(){
+                var selectBox =document.getElementById('id_lclength1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lclength1').val() >0)  $("#id_lclength1").css('background-color', 'white');
+                if ($('#id_lclength1').val() >0)  $("#id_lctransition1").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("lclenght1-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lclength1: $('#id_lclength1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+$('#id_lclength1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition1_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition1").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition1').change(function(){
+                var selectBox =document.getElementById('id_lctransition1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lctransition1').val() >0)  $("#id_lctransition1").css('background-color', 'white');
+                var url = $(".form2").attr("lctransition1-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition1: $('#id_lctransition1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lctransition1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition1: $('#id_lctransition1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition1: $('#id_lctransition1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lctransition1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+////////////////////////////  Row 2  ///////////////////////////////
+
+$(function(){
+    $('#id_qty2').change(function(){
+                var selectBox =document.getElementById('id_qty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_qty2').val() >0) var url = $(".form2").attr("qty2-url");
+                if ($('#id_qty2').val() ==0) var url = $(".form2").attr("qty2A-url");
+                if ($('#id_qty2').val() ==0)  $("#id_beamlength2ft").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty2').val() ==0)  $("#id_beamlength2in").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty2').val() >0)  $("#id_beamlength2ft").attr("disabled", false).css('background-color', '#66d09a');
+                       $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty2: $('#id_qty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+
+$(function(){
+    $('#id_qty2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty2: $('#id_qty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_qty2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                document.getElementById("id_beamlength2in").focus();
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty2: $('#id_qty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 300);
+    });
+});
+
+$(function(){
+$('#id_qty2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+$('#id_qty2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_ft2_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength2ft").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+
+$(function(){
+$('#id_qty2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_in2_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength2in").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength2ft').change(function(){
+                var selectBox =document.getElementById('id_beamlength2ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength2ft').val() >0)  $("#id_beamlength2ft").css('background-color', 'white');
+                if ($('#id_beamlength2ft').val() >0)  $("#id_beamlength2in").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("ft2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength2ft: $('#id_beamlength2ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_beamlength2ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength2ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength2ft: $('#id_beamlength2ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength2ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength2ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                document.getElementById("id_beamlength2in").focus();
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength2ft: $('#id_beamlength2ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength2ft').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_beamlength2in').change(function(){
+                var selectBox =document.getElementById('id_beamlength2in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength2in').val() >0)  $("#id_beamlength2in").css('background-color', 'white');
+                var url = $(".form2").attr("inch2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength2in: $('#id_beamlength2in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength2in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength2in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength2in: $('#id_beamlength2in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength2in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength2in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength2in: $('#id_beamlength2in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength2in').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_beamlength2in').blur(function(){
+    setTimeout(function(){
+            $("#id_beamlength2in").css('background-color', 'white');
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_lcqty2').change(function(){
+                var selectBox =document.getElementById('id_lcqty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("lcqty2-url");
+                if ($('#id_lcqty2').val() ==0)  $("#id_lclength2").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty2').val() ==0)  $("#id_lctransition2").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty2').val() >0)  $("#id_lclength2").attr("disabled", false).css('background-color', '#66d09a');
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty2: $('#id_lcqty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lcqty2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty2: $('#id_lcqty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lcqty2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty2: $('#id_lcqty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lcqty2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_lcqty2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lclenght2_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lclength2").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_lcqty2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition2_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition2").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lclength2').change(function(){
+                var selectBox =document.getElementById('id_lclength2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lclength2').val() >0)  $("#id_lclength2").css('background-color', 'white');
+                if ($('#id_lclength2').val() >0)  $("#id_lctransition2").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("lclenght2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lclength2: $('#id_lclength2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+$('#id_lclength2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition2_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition2").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition2').change(function(){
+                var selectBox =document.getElementById('id_lctransition2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lctransition2').val() >0)  $("#id_lctransition2").css('background-color', 'white');
+                var url = $(".form2").attr("lctransition2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition2: $('#id_lctransition2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lctransition2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals2-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition2: $('#id_lctransition2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition2: $('#id_lctransition2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lctransition2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+////////////////////////////  Row 3  ///////////////////////////////
+
+$(function(){
+    $('#id_qty3').change(function(){
+                var selectBox =document.getElementById('id_qty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_qty3').val() >0) var url = $(".form2").attr("qty3-url");
+                if ($('#id_qty3').val() ==0) var url = $(".form2").attr("qty3A-url");
+                if ($('#id_qty3').val() ==0)  $("#id_beamlength3ft").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty3').val() ==0)  $("#id_beamlength3in").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty3').val() >0)  $("#id_beamlength3ft").attr("disabled", false).css('background-color', '#66d09a');
+
+
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty3: $('#id_qty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+
+$(function(){
+    $('#id_qty3').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty3: $('#id_qty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_qty3').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty3: $('#id_qty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 300);
+    });
+});
+
+$(function(){
+$('#id_qty3').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+$('#id_qty3').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_ft3_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength3ft").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+
+$(function(){
+$('#id_qty3').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_in3_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength3in").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength3ft').change(function(){
+                var selectBox =document.getElementById('id_beamlength3ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength3ft').val() >0)  $("#id_beamlength3ft").css('background-color', 'white');
+                if ($('#id_beamlength3ft').val() >0)  $("#id_beamlength3in").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("ft3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength3ft: $('#id_beamlength3ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_beamlength3ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength3ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength3ft: $('#id_beamlength3ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength3ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength3ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                document.getElementById("id_beamlength3in").focus();
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength3ft: $('#id_beamlength3ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength3ft').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_beamlength3in').change(function(){
+                var selectBox =document.getElementById('id_beamlength3in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength3in').val() >0)  $("#id_beamlength3in").css('background-color', 'white');
+                var url = $(".form2").attr("inch3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength3in: $('#id_beamlength3in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength3in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength3in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength3in: $('#id_beamlength3in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength3in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength3in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength3in: $('#id_beamlength3in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength3in').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_beamlength3in').blur(function(){
+    setTimeout(function(){
+            $("#id_beamlength3in").css('background-color', 'white');
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_lcqty3').change(function(){
+                var selectBox =document.getElementById('id_lcqty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("lcqty3-url");
+                if ($('#id_lcqty3').val() ==0)  $("#id_lclength3").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty3').val() ==0)  $("#id_lctransition3").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty3').val() >0)  $("#id_lclength3").attr("disabled", false).css('background-color', '#66d09a');
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty3: $('#id_lcqty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lcqty3').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty3: $('#id_lcqty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lcqty3').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty3: $('#id_lcqty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lcqty3').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_lcqty3').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lclenght3_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lclength3").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_lcqty3').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition3_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition3").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lclength3').change(function(){
+                var selectBox =document.getElementById('id_lclength3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lclength3').val() >0)  $("#id_lclength3").css('background-color', 'white');
+                if ($('#id_lclength3').val() >0)  $("#id_lctransition3").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("lclenght3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lclength3: $('#id_lclength3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+$('#id_lclength3').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition3_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition3").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition3').change(function(){
+                var selectBox =document.getElementById('id_lctransition3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lctransition3').val() >0)  $("#id_lctransition3").css('background-color', 'white');
+                var url = $(".form2").attr("lctransition3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition3: $('#id_lctransition3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lctransition3').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals3-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition3: $('#id_lctransition3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition3').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition3: $('#id_lctransition3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lctransition3').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+////////////////////////////  Row 4  ///////////////////////////////
+
+$(function(){
+    $('#id_qty4').change(function(){
+                var selectBox =document.getElementById('id_qty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("qty4-url");
+                if ($('#id_qty4').val() ==0)  $("#id_beamlength4ft").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty4').val() ==0)  $("#id_beamlength4in").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty4').val() >0)  $("#id_beamlength4ft").attr("disabled", false).css('background-color', '#66d09a');
+                  $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty4: $('#id_qty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+
+$(function(){
+    $('#id_qty4').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty4: $('#id_qty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_qty4').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty4: $('#id_qty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 300);
+    });
+});
+
+$(function(){
+$('#id_qty4').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+$('#id_qty4').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_ft4_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength4ft").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+
+$(function(){
+$('#id_qty4').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_in4_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength4in").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength4ft').change(function(){
+                var selectBox =document.getElementById('id_beamlength4ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength4ft').val() >0)  $("#id_beamlength4ft").css('background-color', 'white');
+                if ($('#id_beamlength4ft').val() >0)  $("#id_beamlength4in").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("ft4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength4ft: $('#id_beamlength4ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_beamlength4ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength4ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength4ft: $('#id_beamlength4ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength4ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength4ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                document.getElementById("id_beamlength4in").focus();
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength4ft: $('#id_beamlength4ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength4ft').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_beamlength4in').change(function(){
+                var selectBox =document.getElementById('id_beamlength4in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength4in').val() >0)  $("#id_beamlength4in").css('background-color', 'white');
+                var url = $(".form2").attr("inch4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength4in: $('#id_beamlength4in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength4in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength4in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength4in: $('#id_beamlength4in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength4in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength4in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength4in: $('#id_beamlength4in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength4in').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_beamlength4in').blur(function(){
+    setTimeout(function(){
+            $("#id_beamlength4in").css('background-color', 'white');
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_lcqty4').change(function(){
+                var selectBox =document.getElementById('id_lcqty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("lcqty4-url");
+                if ($('#id_lcqty4').val() ==0)  $("#id_lclength4").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty4').val() ==0)  $("#id_lctransition4").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty4').val() >0)  $("#id_lclength4").attr("disabled", false).css('background-color', '#66d09a');
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty4: $('#id_lcqty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lcqty4').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty4: $('#id_lcqty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lcqty4').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty4: $('#id_lcqty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lcqty4').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_lcqty4').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lclenght4_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lclength4").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_lcqty4').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition4_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition4").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lclength4').change(function(){
+                var selectBox =document.getElementById('id_lclength4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lclength4').val() >0)  $("#id_lclength4").css('background-color', 'white');
+                if ($('#id_lclength4').val() >0)  $("#id_lctransition4").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("lclenght4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lclength4: $('#id_lclength4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+$('#id_lclength4').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition4_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition4").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition4').change(function(){
+                var selectBox =document.getElementById('id_lctransition4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lctransition4').val() >0)  $("#id_lctransition4").css('background-color', 'white');
+                var url = $(".form2").attr("lctransition4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition4: $('#id_lctransition4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lctransition4').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals4-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition4: $('#id_lctransition4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition4').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition4: $('#id_lctransition4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lctransition4').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+////////////////////////////  Row 5  ///////////////////////////////
+
+$(function(){
+    $('#id_qty5').change(function(){
+                var selectBox =document.getElementById('id_qty5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("qty5-url");
+                if ($('#id_qty5').val() ==0)  $("#id_beamlength5ft").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty5').val() ==0)  $("#id_beamlength5in").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty5').val() >0)  $("#id_beamlength5ft").attr("disabled", false).css('background-color', '#66d09a');
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty5: $('#id_qty5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+
+$(function(){
+    $('#id_qty5').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty5: $('#id_qty5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_qty5').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty5: $('#id_qty5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 300);
+    });
+});
+
+$(function(){
+$('#id_qty5').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+$('#id_qty5').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_ft5_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength5ft").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+$(function(){
+$('#id_qty5').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_in5_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength5in").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength5ft').change(function(){
+                var selectBox =document.getElementById('id_beamlength5ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength5ft').val() >0)  $("#id_beamlength5ft").css('background-color', 'white');
+                if ($('#id_beamlength5ft').val() >0)  $("#id_beamlength5in").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("ft5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength5ft: $('#id_beamlength5ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_beamlength5ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength5ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength5ft: $('#id_beamlength5ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength5ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength5ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                document.getElementById("id_beamlength5in").focus();
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength5ft: $('#id_beamlength5ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength5ft').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_beamlength5in').change(function(){
+                var selectBox =document.getElementById('id_beamlength5in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength5in').val() >0)  $("#id_beamlength5in").css('background-color', 'white');
+                var url = $(".form2").attr("inch5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength5in: $('#id_beamlength5in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength5in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength5in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength5in: $('#id_beamlength5in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength5in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength5in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength5in: $('#id_beamlength5in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength5in').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_beamlength5in').blur(function(){
+    setTimeout(function(){
+            $("#id_beamlength5in").css('background-color', 'white');
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_lcqty5').change(function(){
+                var selectBox =document.getElementById('id_lcqty5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("lcqty5-url");
+                if ($('#id_lcqty5').val() ==0)  $("#id_lclength5").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty5').val() ==0)  $("#id_lctransition5").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty5').val() >0)  $("#id_lclength5").attr("disabled", false).css('background-color', '#66d09a');
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty5: $('#id_lcqty5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lcqty5').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty5: $('#id_lcqty5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lcqty5').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty5: $('#id_lcqty5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lcqty5').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_lcqty5').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lclenght5_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lclength5").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_lcqty5').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition5_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition5").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lclength5').change(function(){
+                var selectBox =document.getElementById('id_lclength5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lclength5').val() >0)  $("#id_lclength5").css('background-color', 'white');
+                if ($('#id_lclength5').val() >0)  $("#id_lctransition5").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("lclenght5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lclength5: $('#id_lclength5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+$('#id_lclength5').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition5_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition5").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition5').change(function(){
+                var selectBox =document.getElementById('id_lctransition5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lctransition5').val() >0)  $("#id_lctransition5").css('background-color', 'white');
+                var url = $(".form2").attr("lctransition5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition5: $('#id_lctransition5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lctransition5').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals5-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition5: $('#id_lctransition5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition5').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition5: $('#id_lctransition5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lctransition5').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+////////////////////////////  Row 6  ///////////////////////////////
+
+$(function(){
+    $('#id_qty6').change(function(){
+                var selectBox =document.getElementById('id_qty6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_qty6').val() >0) var url = $(".form2").attr("qty6-url");
+                if ($('#id_qty6').val() ==0) var url = $(".form2").attr("qty6A-url");
+                if ($('#id_qty6').val() ==0)  $("#id_beamlength6ft").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty6').val() ==0)  $("#id_beamlength6in").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_qty6').val() >0)  $("#id_beamlength6ft").attr("disabled", false).css('background-color', '#66d09a');
+
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty6: $('#id_qty6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+
+$(function(){
+    $('#id_qty6').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty6: $('#id_qty6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_qty6').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_qty6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_qty6: $('#id_qty6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 300);
+    });
+});
+
+$(function(){
+$('#id_qty6').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+$('#id_qty6').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_ft6_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength6ft").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+
+$(function(){
+$('#id_qty6').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_in6_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_beamlength6in").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength6ft').change(function(){
+                var selectBox =document.getElementById('id_beamlength6ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength6ft').val() >0)  $("#id_beamlength6ft").css('background-color', 'white');
+                if ($('#id_beamlength6ft').val() >0)  $("#id_beamlength6in").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("ft6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength6ft: $('#id_beamlength6ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_beamlength6ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength6ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength6ft: $('#id_beamlength6ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength6ft').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength6ft');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                document.getElementById("id_beamlength6in").focus();
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength6ft: $('#id_beamlength6ft').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength6ft').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_beamlength6in').change(function(){
+                var selectBox =document.getElementById('id_beamlength6in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_beamlength6in').val() >0)  $("#id_beamlength6in").css('background-color', 'white');
+                var url = $(".form2").attr("inch6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength6in: $('#id_beamlength6in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength6in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength6in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength6in: $('#id_beamlength6in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_beamlength6in').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_beamlength6in');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_beamlength6in: $('#id_beamlength6in').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_beamlength6in').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_beamlength6in').blur(function(){
+    setTimeout(function(){
+            $("#id_beamlength6in").css('background-color', 'white');
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_lcqty6').change(function(){
+                var selectBox =document.getElementById('id_lcqty6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("lcqty6-url");
+                if ($('#id_lcqty6').val() ==0)  $("#id_lclength6").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty6').val() ==0)  $("#id_lctransition6").attr("disabled", true).css('background-color', 'white');
+                if ($('#id_lcqty6').val() >0)  $("#id_lclength6").attr("disabled", false).css('background-color', '#66d09a');
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty6: $('#id_lcqty6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lcqty6').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty6: $('#id_lcqty6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lcqty6').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lcqty6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lcqty6: $('#id_lcqty6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lcqty6').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+$('#id_lcqty6').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lclenght6_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lclength6").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_lcqty6').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition6_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition6").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lclength6').change(function(){
+                var selectBox =document.getElementById('id_lclength6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lclength6').val() >0)  $("#id_lclength6").css('background-color', 'white');
+                if ($('#id_lclength6').val() >0)  $("#id_lctransition6").attr("disabled", false).css('background-color', '#66d09a');
+                var url = $(".form2").attr("lclenght6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lclength6: $('#id_lclength6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+$('#id_lclength6').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_lctransition6_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_lctransition6").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition6').change(function(){
+                var selectBox =document.getElementById('id_lctransition6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_lctransition6').val() >0)  $("#id_lctransition6").css('background-color', 'white');
+                var url = $(".form2").attr("lctransition6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition6: $('#id_lctransition6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_lctransition6').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totals6-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition6: $('#id_lctransition6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_lctransition6').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_lctransition6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_lctransition6: $('#id_lctransition6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_lctransition6').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_footingqty').change(function(){
+                var selectBox =document.getElementById('id_footingqty');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_footingqty').val() >0)  $("#id_footingsize").attr("disabled", false).css('background-color', '#66d09a');
+                if ($('#id_footingqty').val() ==0)  $("#id_footingsize").attr("disabled", true).css('background-color', '#e1e1e1');
+                var url = $(".form2").attr("footingqty-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_footingqty: $('#id_footingqty').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+$(function(){
+    $('#id_footingqty').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_footingqty');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totalsfootingsize-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_footingqty: $('#id_footingqty').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_footingqty').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_footingqty');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_footingqty: $('#id_footingqty').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 300);
+    });
+});
+
+$(function(){
+$('#id_footingqty').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+
+$(function(){
+$('#id_footingqty').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_footingsize_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_footingsize").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+
+
+
+$(function(){
+    $('#id_footingsize').change(function(){
+                var selectBox =document.getElementById('id_footingsize');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_footingsize').val() >1)  $("#id_footingsize").css('background-color', 'white');
+                var url = $(".form2").attr("footingsize-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_footingsize: $('#id_footingsize').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+
+$(function(){
+    $('#id_footingsize').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_footingsize');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("totalsfootingsize-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_footingsize: $('#id_footingsize').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 200);
+    });
+});
+
+
+$(function(){
+    $('#id_footingsize').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_footingsize');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_footingsize: $('#id_footingsize').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_footingsize').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+
+////////////////////////////  Misc. Row 1 Qty  ///////////////////////////////
+
+
+$(function(){
+    $('#id_miscqty1').change(function(){
+                var selectBox =document.getElementById('id_miscqty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty1').val() >0)  $("#miscdescription1").attr("disabled", false).css('background-color', '#66d09a');
+                if ($('#id_miscqty1').val() ==0)  $("#miscdescription1").attr("disabled", true).css('background-color', '#e1e1e1');
+                if ($('#id_miscqty1').val() ==0)  $("#miscmat1").attr("disabled", true).css('background-color', '#e1e1e1');
+                if ($('#id_miscqty1').val() ==0)  $("#misclabor1").attr("disabled", true).css('background-color', '#e1e1e1');
+                 $("input#miscdescription1").focus();
+                var url = $(".form2").attr("misc1qty-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty1: $('#id_miscqty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_miscqty1').change(function(){
+    setTimeout(function(){
+                var selectBox =document.getElementById('id_miscqty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("misctotal-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty1: $('#id_miscqty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+         }, 200);
+    });
+});
+
+$(function(){
+    $('#id_miscqty1').change(function(){
+    setTimeout(function(){
+                var selectBox =document.getElementById('id_miscqty1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("jobcost-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty1: $('#id_miscqty1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+         }, 300);
+    });
+});
+
+$(function(){
+$('#id_miscqty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_materialcost-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+$('#id_miscqty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_misc1descrip_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_miscdescription1").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_miscqty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_misc1mat_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_miscmat1").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_miscqty1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("load_misc1labor_0-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_misclabor1").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+
+////////////////////////////  Misc. Row 2 Qty  ///////////////////////////////
+
+
+$(function(){
+    $('#id_miscqty2').change(function(){
+                var selectBox =document.getElementById('id_miscqty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty2').val() >0)  $("#miscdescription2").attr("disabled", false).css('background-color', '#66d09a');
+                if ($('#id_miscqty2').val() ==0)  $("#miscdescription2").attr("disabled", true).css('background-color', '#e1e1e1');
+                if ($('#id_miscqty2').val() ==0)  $("#miscmat2").attr("disabled", true).css('background-color', '#e1e1e1');
+                if ($('#id_miscqty2').val() ==0)  $("#misclabor2").attr("disabled", true).css('background-color', '#e1e1e1');
+                
+                 $("input#miscdescription2").focus();
+                var url = $(".form2").attr("misc2qty-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty2: $('#id_miscqty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_miscqty2').change(function(){
+    setTimeout(function(){
+                var selectBox =document.getElementById('id_miscqty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty2').val() ==0) var url = $(".form2").attr("misctotal-url");
+                if ($('#id_miscqty2').val() >0) var urlC = $(".form2").attr();
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty2: $('#id_miscqty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+         }, 200);
+    });
+});
+
+$(function(){
+    $('#id_miscqty2').change(function(){
+    setTimeout(function(){
+                var selectBox =document.getElementById('id_miscqty2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty2').val() ==0) var url = $(".form2").attr("jobcost-url");
+                if ($('#id_miscqty2').val() >0) var urlC = $(".form2").attr();
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty2: $('#id_miscqty2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+         }, 300);
+    });
+});
+
+$(function(){
+$('#id_miscqty2').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty2').val() ==0) var urlC = $(".form2").attr("load_materialcost-url");
+            if ($('#id_miscqty2').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+$('#id_miscqty2').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty2').val() ==0) var urlC = $(".form2").attr("load_misc2descrip_0-url");
+            if ($('#id_miscqty2').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_miscdescription2").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_miscqty2').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty2').val() ==0) var urlC = $(".form2").attr("load_misc2mat_0-url");
+            if ($('#id_miscqty2').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_miscmat2").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_miscqty2').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty2').val() ==0) var urlC = $(".form2").attr("load_misc2labor_0-url");
+            if ($('#id_miscqty2').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_misclabor2").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+////////////////////////////  Misc. Row 3 Qty  ///////////////////////////////
+
+
+$(function(){
+    $('#id_miscqty3').change(function(){
+                var selectBox =document.getElementById('id_miscqty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty3').val() >0)  $("#miscdescription3").attr("disabled", false).css('background-color', '#66d09a');
+                if ($('#id_miscqty3').val() ==0)  $("#miscdescription3").attr("disabled", true).css('background-color', '#e1e1e1');
+                if ($('#id_miscqty3').val() ==0)  $("#miscmat3").attr("disabled", true).css('background-color', '#e1e1e1');
+                if ($('#id_miscqty3').val() ==0)  $("#misclabor3").attr("disabled", true).css('background-color', '#e1e1e1');
+                
+                 $("input#miscdescription3").focus();
+                var url = $(".form2").attr("misc3qty-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty3: $('#id_miscqty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_miscqty3').change(function(){
+    setTimeout(function(){
+                var selectBox =document.getElementById('id_miscqty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty3').val() ==0) var url = $(".form2").attr("misctotal-url");
+                if ($('#id_miscqty3').val() >0) var urlC = $(".form2").attr();
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty3: $('#id_miscqty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+         }, 300);
+    });
+});
+
+$(function(){
+    $('#id_miscqty3').change(function(){
+    setTimeout(function(){
+                var selectBox =document.getElementById('id_miscqty3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty3').val() ==0) var url = $(".form2").attr("jobcost-url");
+                if ($('#id_miscqty3').val() >0) var urlC = $(".form2").attr();
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty3: $('#id_miscqty3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+         }, 400);
+    });
+});
+
+$(function(){
+$('#id_miscqty3').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty3').val() ==0) var urlC = $(".form2").attr("load_materialcost-url");
+            if ($('#id_miscqty3').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+$(function(){
+$('#id_miscqty3').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty3').val() ==0) var urlC = $(".form2").attr("load_misc3descrip_0-url");
+            if ($('#id_miscqty3').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_miscdescription3").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_miscqty3').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty3').val() ==0) var urlC = $(".form2").attr("load_misc3mat_0-url");
+            if ($('#id_miscqty3').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_miscmat3").html(data);
+                     }
+                });
+        }, 700);
+    });
+});
+
+$(function(){
+$('#id_miscqty3').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty3').val() ==0) var urlC = $(".form2").attr("load_misc3labor_0-url");
+            if ($('#id_miscqty3').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_misclabor3").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+
+
+////////////////////////////  Misc. Row 4 Qty  ///////////////////////////////
+
+
+$(function(){
+    $('#id_miscqty4').change(function(){
+                var selectBox =document.getElementById('id_miscqty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty4').val() >0)  $("#miscdescription4").attr("disabled", false).css('background-color', '#66d09a');
+                if ($('#id_miscqty4').val() ==0)  $("#miscdescription4").attr("disabled", true).css('background-color', '#e1e1e1');
+                if ($('#id_miscqty4').val() ==0)  $("#miscmat4").attr("disabled", true).css('background-color', '#e1e1e1');
+                if ($('#id_miscqty4').val() ==0)  $("#misclabor4").attr("disabled", true).css('background-color', '#e1e1e1');
+                
+                 $("input#miscdescription4").focus();
+                var url = $(".form2").attr("misc4qty-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty4: $('#id_miscqty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+$(function(){
+    $('#id_miscqty4').change(function(){
+    setTimeout(function(){
+                var selectBox =document.getElementById('id_miscqty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty4').val() ==0) var url = $(".form2").attr("misctotal-url");
+                if ($('#id_miscqty4').val() >0) var urlC = $(".form2").attr();
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty4: $('#id_miscqty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+         }, 300);
+    });
+});
+
+$(function(){
+    $('#id_miscqty4').change(function(){
+    setTimeout(function(){
+                var selectBox =document.getElementById('id_miscqty4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                if ($('#id_miscqty4').val() ==0) var url = $(".form2").attr("jobcost-url");
+                if ($('#id_miscqty4').val() >0) var urlC = $(".form2").attr();
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_miscqty4: $('#id_miscqty4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+         }, 400);
+    });
+});
+
+$(function(){
+$('#id_miscqty4').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty4').val() ==0) var urlC = $(".form2").attr("load_materialcost-url");
+            if ($('#id_miscqty4').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_materialcost").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+$(function(){
+$('#id_miscqty4').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty4').val() ==0) var urlC = $(".form2").attr("load_misc4descrip_0-url");
+            if ($('#id_miscqty4').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_miscdescription4").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+$(function(){
+$('#id_miscqty4').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty4').val() ==0) var urlC = $(".form2").attr("load_misc4mat_0-url");
+            if ($('#id_miscqty4').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_miscmat4").html(data);
+                     }
+                });
+        }, 700);
+    });
+});
+
+$(function(){
+$('#id_miscqty4').change(function(){
+    setTimeout(function(){
+            if ($('#id_miscqty4').val() ==0) var urlC = $(".form2").attr("load_misc4labor_0-url");
+            if ($('#id_miscqty4').val() >0) var urlC = $(".form2").attr();
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_misclabor4").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+</script>

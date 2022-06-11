@@ -1,0 +1,31 @@
+<input id="miscmat3" value="{{ miscmat3A.miscmat3 }}">
+
+<script>
+$(document).ready(function() {
+    if ($('#id_miscqty3').val() ==0)  $("#miscmat3").attr("disabled", true).css('background-color', '#e1e1e1');
+    $("#miscmat3").focus();
+
+});
+
+
+$(function(){
+    $('#miscmat3').blur(function(){
+                var selectBox =document.getElementById('miscmat3');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                $("#miscmat3").css('background-color', 'white');
+                $("#misclabor3").css('background-color', '#66d09a').attr("disabled", false).css('color', 'black');
+                $("#misclabor3").focus();
+                var url = $(".form2").attr("misc3mat-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            miscmat3: $('#miscmat3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    });
+});
+
+</script>

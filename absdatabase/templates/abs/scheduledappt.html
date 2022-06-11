@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/scheduledappt.css">
+    <title>ABS Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/black.jpg')">
+<section id="workarea1">
+    <div class="container">
+        <div class="container1">
+        </div>
+        <div class="container2">
+            <h1 id="formh2">Scheduled Appointment</h1>
+
+            <form class="form2" method="post">
+                    {% csrf_token %}
+                    {{ form.name_of_field }}
+                    <div class="form-rowid">
+                        {{ form.custid.errors }}
+                        <label id="label_custid">Cust ID:</label>
+                        {{ form.custid }}
+                        <a class="btn btn9" id="view1" href="{% url 'absdatabase:PDFgallery2' instance.custid %}">View Eng. Report</a>
+                        <a class="btn btn9" id="view" href="{% url 'absdatabase:gallery2' instance.custid %}">View Photos</a>
+                    </div>
+                    <div class="form-rowcustinfo">
+                        {% for obj in object_list2 %}
+                        <label id="label_custfirstname">Customer Information</label>
+                        <div id="firstname">{{ obj.custfirstname }}</div>
+                        <div id="lastname">{{ obj.custlastname }}</div>
+                        <div id="add1">{{ obj.custadd1 }}</div>
+                        <div id="city">{{ obj.custcity }}</div>
+                        <div id="st">{{ obj.custst }}</div>
+                        <div id="custzipcode">{{ obj.custzipcode }}</div>
+                        <div id="row-phone">
+                            <div id="workphone1">
+                                <label class="label_custwork1">Work Phone 1</label>
+                                <div id="custwork1">{{ obj.custwork1 }}</div>
+                            </div>
+                            <div id="workphone2">
+                                <label class="label_custwork2">Work Phone 2</label>
+                                <div id="custwork2">{{ obj.custwork2 }}</div>
+                            </div>
+                            <div id="cellphone1">
+                                <label class="label_custwork1">Cell Phone 1</label>
+                                <div id="custcell1">{{ obj.custcell1 }}</div>
+                            </div>
+                            <div id="cellphone2">
+                                <label class="label_custwork2">Cell Phone 2</label>
+                                <div id="custcell2">{{ obj.custcell2 }}</div>
+                            </div>
+                            <div id="cellhome">
+                                <label class="label_home">Home Phone</label>
+                                <div id="custhome">{{ obj.custhome }}</div>
+                            </div>
+                        </div>
+                        <div id="row-email">
+                            <div id="email1">
+                                <label class="label_email1">Email 1</label>
+                                <div id="custemail1">{{ obj.custemail1 }}</div>
+                            </div>
+                            <div id="email2">
+                                <label class="label_email2">Email 2</label>
+                                <div id="custemail2">{{ obj.custemail2 }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                <div class="appoint">
+                        <div class="form-rowad">
+                            {{ form.appdate.errors }}
+                            <label id="label_appdate">Appointment Date</label>
+                            {{ form.appdate }}
+                        </div>
+                        <div class="form-rowat">
+                            {{ form.apptime.errors }}
+                            <label id="label_apptime">Appointment Time</label>
+                            {{ form.apptime }}
+                        </div>
+                    </div>
+                    <div class="form-rowsw">
+                        {{ form.appdescrip.errors }}
+                        <label id="label_appdescrip">Scope of Work</label>
+                        {{ form.appdescrip }}
+                    </div>
+                <a id="btn1"  href="{% url 'absdatabase:bidpage' instance2.id %}">Start Bid</a>
+            </form>
+        </div>
+        <div class="container3">
+            <div class="form-delete">
+            <a class="btn btn9" id="back2" href="../../appqueue">Back</a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+</script>

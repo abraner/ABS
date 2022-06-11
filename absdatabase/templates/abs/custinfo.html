@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/custinfo.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/black.jpg')">
+<div class="container">
+    <div class="container1">
+    </div>
+    <div class="container2">
+        <h1 id="formh2">Customers Information</h1>
+         <div class="outerdiv">
+            <form id="form2" method="post" enctype="multipart/form-data">
+                 {% csrf_token %}
+                 {{ form.media }}
+                 {{ form.name_of_field }}
+                 <div class="form-rowcustid">
+                     {{ form.custid.errors }}
+                     <label id="label_custid">Cust. ID</label>
+                     {{ form.custid }}
+                 </div>
+                 <div class="form-rowcom">
+                     {{ form.custcompanytname.errors }}
+                     <label id="label_custcompanytname">Company:</label>
+                     {{ form.custcompanytname }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custfirstname.errors }}
+                     <label id="label_custfirstname">First Name:</label>
+                     {{ form.custfirstname }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custlastname.errors }}
+                     <label id="label_custlastname">Last Name:</label>
+                     {{ form.custlastname }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custadd1.errors }}
+                     <label id="label_custadd1">Address #1:</label>
+                     {{ form.custadd1 }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custadd2.errors }}
+                     <label id="label_custadd2">Address #2:</label>
+                     {{ form.custadd2 }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custcity.errors }}
+                     <label id="label_custcity">City:</label>
+                     {{ form.custcity }}
+                 </div>
+                 <div class="form-rowst">
+                     {{ form.custst.errors }}
+                     <label class="label_custst">State:</label>
+                     {{ form.custst }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custzipcode.errors }}
+                     <label class="label_custzipcode">Zip Code:</label>
+                     {{ form.custzipcode }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custwork1.errors }}
+                     <label class="label_custwork1">Work Phone #1:</label>
+                     {{ form.custwork1 }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custwork2.errors }}
+                     <label class="label_custwork2">Work Phone #2:</label>
+                     {{ form.custwork2 }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custcell1.errors }}
+                     <label class="label_custcell1">Cell Phone #1:</label>
+                     {{ form.custcell1 }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custcell2.errors }}
+                     <label class="label_custcell2">Cell Phone #2:</label>
+                     {{ form.custcell2 }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custhome.errors }}
+                     <label class="label_custhome">Home Phone:</label>
+                     {{ form.custhome }}
+                 </div>
+                 <div class="form-rowemail">
+                     {{ form.custemail1.errors }}
+                     <label class="label_custemail1">Email #1:</label>
+                     {{ form.custemail1 }}
+                 </div>
+                 <div class="form-rowemail">
+                     {{ form.custemail2.errors }}
+                     <label class="label_custemail2">Email #2:</label>
+                     {{ form.custemail2 }}
+                 </div>
+                <div id="but2">
+
+                    <a class="btn8" href="{{ instance.get_absolute9_url }}">Upload Eng. Report</a>
+                    <a class="button4" href="{{ instance.get_absolute8_url }}">Upload Photos</a>
+                    <a class="btn6" href="{% url 'absdatabase:proposal' instance2.id %}">Proposal</a>
+                    <a class="btn5" href="{% url 'absdatabase:contract' instance2.id %}">Terms & Conditions</a>
+                    <a class="btn4" href="{% url 'absdatabase:finalinvoice' instance2.id %}">Final Invoice</a>
+                    <a class="btn3" href="{% url 'absdatabase:bidpage' instance2.id %}">View Existing Bid</a>
+                    <a class="btn2" href="{% url 'absdatabase:edit_cust_info' instance.id %}">Update Customers Info.</a>
+                    <a class="btn1" href="{{ instance.get_absolute7_url }}">Delete Customer</a>
+                </div>
+                <div id="but1">
+                    <a class="btn10" href="{% url 'absdatabase:PDFgallery' instance.custid %}">View Eng. Report</a>
+                    <a class="btn9" href="{% url 'absdatabase:gallery' instance.custid %}">View Photos</a>
+                    <a class="btn6" href="">Email Proposal</a>
+                    <a class="btn5" href="">Email Terms & Conditions</a>
+                    <a class="btn4" href="">Email Final Invoice</a>
+                </div>
+                </form>
+         </div>
+
+
+    </div>
+    <a id="back"  href="../../cust_info_existing">Back</a>
+    <div class="container4">
+    </div>
+</div>
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script>
+
+
+
+//function change(url) {
+//    window.history.pushState('new', 'title', url);
+//}
+
+
+$(document).ready(function() {
+    $("#id_custid").attr("disabled", true)
+    $("#id_conid").attr("disabled", true)
+    $("#id_custcompanytname").attr("disabled", true)
+    $("#id_custfirstname").attr("disabled", true)
+    $("#id_custlastname").attr("disabled", true)
+    $("#id_custadd1").attr("disabled", true)
+    $("#id_custadd2").attr("disabled", true)
+    $("#id_custcity").attr("disabled", true)
+    $("#id_custst").attr("disabled", true)
+    $("#id_custzipcode").attr("disabled", true)
+    $("#id_custwork1_0").attr("disabled", true)
+    $("#id_custwork2_0").attr("disabled", true)
+    $("#id_custcell1_0").attr("disabled", true)
+    $("#id_custcell2_0").attr("disabled", true)
+    $("#id_custhome_0").attr("disabled", true)
+    $("#id_custemail1").attr("disabled", true)
+    $("#id_custemail2").attr("disabled", true)
+
+});
+
+$(function(){
+    $('.button4').click(function(){
+    $(".rm-modal").show()
+
+    });
+});
+
+//$(function(){
+//    $('#id_photos').click(function(){
+//    $(".rm-modal").hide()
+//
+//    });
+//});
+
+
+</script>
+
+
+
+
+
+

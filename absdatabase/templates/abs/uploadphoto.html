@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/uploadphoto.css">
+    <title>ABS Bidding Program</title>
+</head>
+<body>
+<section id="workarea1">
+    <section id="section2">
+        <div class="header">Upload Photo Files</div>
+        <form id="form3" method="post"  class="post-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+                <button type="submit" class="btn btn-secondary">Upload</button>
+                <div id="cancel">
+                    <a class="button4" href="">Cancel</a>
+                </div>
+        </form>
+    </section>
+</section>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+</script>
