@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-a3in&uh*ma=w**u*&&7yx0%jr%2d12$**ixevk!34zp84%n75='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['abraner.pythonanywhere.com']
 
 
 # Application definition
@@ -86,11 +86,10 @@ WSGI_APPLICATION = 'abs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'absdatabase',
-        'USER': 'root',
-        'PASSWORD': 'man2dy',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'NAME': 'abraner$abs',
+        'USER': 'abraner',
+        'PASSWORD': 'Alan2Mary',
+        'HOST': 'abraner.mysql.pythonanywhere-services.com',
 
     }
 }
@@ -145,3 +144,26 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/img/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'absdatabase/img')
 LOGIN_REDIRECT_URL = '/absdatabase/1/main'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = "smtp.comcast.net"
+#EMAIL_PORT = 587
+#EMAIL_HOST_USER = "markhopman@comcast.net"
+#EMAIL_HOST_PASSWORD ="Xaqu@j0ck"
+#EMAIL_USE_TLS = True
+
+# Email Settings
+#EMAIL_HOST = "smtp.gmail.com"
+#EMAIL_PORT = 587
+#EMAIL_HOST_USER = "albraner@gmail.com"
+#EMAIL_HOST_PASSWORD = "piiiwefsqgfbndoj"
+#EMAIL_USE_TLS = True
+#EMAIL_USE_SSL = False
+
+# Email Settings
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "abeamsteel2@gmail.com"
+EMAIL_HOST_PASSWORD = "rxuhpkftshebxffl"
+EMAIL_USE_TLS = True
+#EMAIL_USE_SSL = False
